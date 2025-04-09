@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link href="./src/output.css" rel="stylesheet">
+  <title>home</title>
+</head>
+<body class="Geist bg-[#000713] text-[#FFFFFF]">
+
+
+<!-- NAV START -->
+<div class="mx-[2rem] flex justify-center mb-[6rem]    ">
+  
+  <nav class="fixed z-100  bg-[#FFFFFF0F] border  border-[#7A7A7B70] backdrop-blur-xl rounded-[12px] w-full max-w-[900px] mx-auto mt-5 px-5 py-4 text-[#7A7A7B]">
+    <div class="flex justify-between items-center">
+      <!-- Hamburger and Logo -->
+      <div class="flex items-center gap-4">
+        <!-- Hamburger Icon -->
+        <button id="menu-toggle" class="lg:hidden focus:outline-none transition-transform duration-300">
+          <img id="menu-icon" src="images/hamburger.png" alt="Menu" class="w-6 h-6">
+        </button>
+  
+        <!-- Logo -->
+        <a href="./index.html"><img src="images/navlogo.png" alt="Logo" class="w-[121px] md:w-auto  h-6"></a>
+      </div>
+  
+      <!-- Desktop Nav Links -->
+      <ul class="hidden lg:flex items-center list-none gap-[2rem]">
+      <a href="./affiliate.html">  <li class="cursor-pointer duration-200   hover:text-white">Affiliate</li></a>
+      <a href="./faqs.html">  <li class="cursor-pointer duration-200  hover:text-white">FAQs</li></a>
+      <a href="./about.html">  <li class="cursor-pointer duration-200  hover:text-white">About Us</li></a>
+      <a href="./blog.html">  <li class="cursor-pointer duration-200  hover:text-white">Blog</li></a>
+      </ul>
+  
+      <!-- Right Side -->
+      <div class="hidden lg:flex items-center gap-5">
+        <div class="flex gap-2 items-center">
+          <img src="images/dashboardicon.png" alt="">
+          <li class="list-none hover:text-white duration-200 cursor-pointer">Dashboard</li>
+        </div>
+  
+        <button class="px-6 py-2 rounded text-white tracking-wide backdrop-blur-sm transition-all duration-300 border border-transparent" style="
+          border-width: 1px;
+          border-style: solid;
+          border-image-source: linear-gradient(315.99deg, rgba(242, 243, 245, 0.7) 3.89%, rgba(0, 7, 18, 0.7) 94.54%);
+          border-image-slice: 1;
+        ">
+          Get Funded
+        </button>
+      </div>
+      <button class="block lg:hidden px-3 py-2 mt-2 rounded text-white tracking-wide text-[14px] backdrop-blur-sm transition-all duration-300 border border-transparent" style="
+      border-width: 1px;
+      border-style: solid;
+      border-image-source: linear-gradient(315.99deg, rgba(242, 243, 245, 0.7) 3.89%, rgba(0, 7, 18, 0.7) 94.54%);
+      border-image-slice: 1;
+    ">
+      Get Funded
+    </button>
+    </div>
+ 
+
+  </nav>
+  
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobile-menu" class="fixed z-100 lg:hidden mt-[7rem] backdrop-blur-sm w-full hidden animate-fade-in-down">
+      <div class="w-full px-4 py-6 bg-[#FFFFFF0F] border border-[#7A7A7B70] rounded-[12px] flex flex-col items-center gap-4">
+        <ul class="flex flex-col items-center gap-4 list-none w-full">
+         <a href="./affiliate.html"> <li class="cursor-pointer w-full  hover:text-white text-center">Affiliate</li></a>
+         <a href="./faqs.html"> <li class="cursor-pointer w-full  hover:text-white text-center">FAQs</li></a>
+         <a href="./about.html"> <li class="cursor-pointer w-full  hover:text-white text-center">About Us</li></a>
+         <a href="./blog.html"> <li class="cursor-pointer w-full  hover:text-white text-center">Blog</li></a>
+          <li class="flex justify-center cursor-pointer hover:text-white duration-200 gap-2 items-center bg-[#FFFFFF0F] w-full px-4 py-2 rounded-[8px]">
+            <img src="images/dashboardicon.png" alt="">
+            Dashboard
+          </li>
+        </ul>
+      </div>
+    </div>
+
+
+
+  <style>
+    @keyframes fade-in-down {
+      0% {
+        opacity: 0;
+        transform: translateY(-10px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .animate-fade-in-down {
+      animation: fade-in-down 0.3s ease-out;
+    }
+  </style>
+  
+  <script>
+    const menuToggle = document.getElementById("menu-toggle");
+    const menuIcon = document.getElementById("menu-icon");
+    const mobileMenu = document.getElementById("mobile-menu");
+  
+    let menuOpen = false;
+    menuToggle.addEventListener("click", () => {
+      menuOpen = !menuOpen;
+      mobileMenu.classList.toggle("hidden");
+      menuIcon.src = menuOpen ? "images/cancle.png" : "images/hamburger.png";
+    });
+  </script>
+   
+</div>
+
+   <!-- NAV END  -->
+
+<!-- BACKGROUND IMAGE SECTION -->
+<div class="relative  bg-center bg-no-repeat  py-10" style="
+  background-image: url('images/light2.png'); 
+  height: 583.84px; 
+  opacity: 0.7;
+">
+
+  <div class=""></div> <!-- Optional overlay for contrast -->
+
+  <div class="relative z-10 flex flex-col items-center justify-center gap-6 text-center px-4">
+    <!-- Title -->
+    <h1 class="geist font-semibold text-[36px] md:text-[60px] leading-[100%] max-w-[754px] text-white">
+      Your Go-to Platform For Limitless Trading Growth
+    </h1>
+
+    <!-- Subtitle -->
+    <h2 class="geist font-medium text-[16px] text-[#7A7A7B] leading-[100%] max-w-[632px]">
+      Get instant capital, trade crypto & FX without limits, and keep more of what you earn.
+    </h2>
+<!-- Buttons -->
+<div class="flex gap-[10px] mt-4">
+  <!-- Get Funded Button -->
+  <button 
+    class="w-[156px] h-[51px] bg-[#E6E6E6] text-black font-mono px-6 py-[14px] rounded-[4px]  border-[#00000050] border-[1.5px] shadow-[4px_4px_0px_#00000080] transition-all duration-300 hover:bg-white hover:shadow-[0_0_15px_white]"
+    style="box-shadow: inset -6px -6px 0px 0px #7A7A7B;"
+  >
+    Get Funded
+  </button>
+
+  <!-- Join Discord Button -->
+  <button 
+    class="h-[51px] px-6 py-[14px] rounded-[4px] text-white font-mono tracking-wide backdrop-blur-sm transition-all duration-300  border-transparent border-[1.5px]"
+    style="
+      border-image-source: linear-gradient(315.99deg, rgba(242, 243, 245, 0.7) 3.89%, rgba(0, 7, 18, 0.7) 94.54%);
+      border-image-slice: 1;
+    "
+  >
+    Join Discord
+  </button>
+</div>
+
+
+</div>
+</div>
+<br>
+<br>
+
+<img src="./images/tradingline.png" class="w-full bg-cover" alt="">
+
+
+<div class="mt-[120px]">
+  <h1 class="geist font-semibold text-[40px] leading-[100%] max-w-[754px] text-center mx-auto text-white">
+    Take The challenge, Earn Your Funding
+  </h1>
+<br>
+<br>
+
+<div class="">
+  <!-- Price List -->
+  <div class="w-full max-w-[868px] flex items-center mx-auto mb-3 bg-[#040A14C7] border border-[#1C1C1D] justify-between px-4 py-4 text-sm sm:text-base text-[#7A7A7B] rounded-[9px] overflow-hidden relative">
+    <div class="absolute inset-0 rounded-[9px] border-[1.2px] border-transparent pointer-events-none" style="border-image-source: radial-gradient(51.66% 121.29% at 4.85% 0%, #CFDBF7 0%, #04225E 59.01%, rgba(0, 0, 0, 0) 100%); border-image-slice: 1;"></div>
+
+    <ul id="priceList" class="flex text-[7px] md:text-[14px] flex-wrap justify-between w-full z-10 gap-x-2 gap-y-2">
+      <li class="cursor-pointer px-1 md:px-2 pb-1 transition-all duration-300">$10,000</li>
+      <li class="cursor-pointer px-1 md:px-2 pb-1 transition-all duration-300">$15,000</li>
+      <li class="cursor-pointer px-1 md:px-2 pb-1 transition-all duration-300">$25,000</li>
+      <li class="cursor-pointer px-1 md:px-2 pb-1 transition-all duration-300">$50,000</li>
+      <li class="cursor-pointer px-1 md:px-2 pb-1 transition-all duration-300">$100,000</li>
+      <li class="cursor-pointer px-1 md:px-2 pb-1 transition-all duration-300">$200,000🔥</li>
+    </ul>
+  </div>
+
+<!-- Info Grid - Flex layout for sidebar + table -->
+<div class="w-full overflow-x-auto">
+  <div class="max-w-[850px] flex gap-4 justify-start lg:justify- mx-auto">
+    <!-- Sidebar -->
+    <div class="w-[192px] flex-shrink-0 h-[500px] flex flex-col justify-evenly gap-6 rounded-[16px] border border-[#1C1C1D] bg-[#040A14C7] backdrop-blur-[16.2px] pt-10 px-4">
+      <ul class="list-none text-white text-sm space-y-6">
+        <li>Profit Target</li>
+        <li>Max Daily Loss (5%)</li>
+        <li>Max Overall Loss (10%)</li>
+        <li>Profit Split</li>
+        <li>Leverage</li>
+        <li>Trading Period</li>
+        <li>Trading Days</li>
+        <li>Weekend Trading</li>
+        <li>Fee</li>
+      </ul>
+    </div>
+
+    <!-- Table -->
+    <div class="overflow-x-auto min-w-[600px] flex-1">
+      <table class="w-full rounded-[16px] h-[500px] border border-[#1C1C1D] bg-[#040A14C7] backdrop-blur-[16.2px] text-sm">
+        <thead>
+          <tr>
+            <th class="text-white text-center font-bold py-4 px-2 bg-[#FFFFFF05] border-b border-[#1C1C1D]">
+              Phase 1 <img src="./images/1.png" alt="Phase 1" class="inline-block ml-1" />
+            </th>
+            <th class="text-white text-center font-bold py-4 px-2 bg-[#FFFFFF05] border-b border-[#1C1C1D]">
+              Phase 2 <img src="./images/2.png" alt="Phase 2" class="inline-block ml-1" />
+            </th>
+            <th class="text-white text-center font-bold py-4 px-2 bg-[#FFFFFF05] border-b border-[#1C1C1D]">
+              Live Account <img src="./images/arrow.png" alt="Live" class="inline-block ml-1" />
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="text-center text-white p-2">$4000 (8%)</td><td class="text-center text-white p-2">$2500 (5%)</td><td class="text-center text-white p-2">Funded</td></tr>
+          <tr><td class="text-center text-white p-2">$2500</td><td class="text-center text-white p-2">$2500</td><td class="text-center text-white p-2">$2500</td></tr>
+          <tr><td class="text-center text-white p-2">$5000</td><td class="text-center text-white p-2">$5000</td><td class="text-center text-white p-2">$5000</td></tr>
+          <tr><td class="text-center text-white p-2">Up to 90%</td><td class="text-center text-white p-2">Up to 90%</td><td class="text-center text-white p-2">Up to 90%</td></tr>
+          <tr><td class="text-center text-white p-2">1:30</td><td class="text-center text-white p-2">1:30</td><td class="text-center text-white p-2">1:30</td></tr>
+          <tr><td class="text-center text-white p-2">Unlimited</td><td class="text-center text-white p-2">Unlimited</td><td class="text-center text-white p-2">Unlimited</td></tr>
+          <tr><td class="text-center text-white p-2">5 Minimum days</td><td class="text-center text-white p-2">5 Minimum days</td><td class="text-center text-white p-2">-</td></tr>
+          <tr><td class="text-center"><img src="./images/check.png" alt="" class="mx-auto" /></td><td class="text-center"><img src="./images/check.png" alt="" class="mx-auto" /></td><td class="text-center"><img src="./images/check.png" alt="" class="mx-auto" /></td></tr>
+          <tr><td class="text-center text-white p-2">$349</td><td class="text-center text-white p-2">Free</td><td class="text-center text-white p-2">Free</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<script>
+  const listItems = document.querySelectorAll("#priceList li");
+
+  listItems.forEach(item => {
+    item.addEventListener("click", () => {
+      listItems.forEach(li => {
+        li.style.borderBottom = "none";
+        li.style.borderImage = "none";
+      });
+
+      item.style.borderBottom = "3px solid";
+      item.style.borderImage = "radial-gradient(135.64% 227.94% at -18.83% 100%, #FFFFFF 0%, #000712 53.4%, #FFFFFF 100%) 1";
+    });
+  });
+</script>
+
+
+
+<div class="md:flex space-y-5 justify-between p-5 lg:w-[868px] mx-auto">
+  <div class="gap-3 md:flex">
+    <p class="text-[#7A7A7B] text-[16px]  font-semibold text-shadow-lg py-[16px] px-0">
+      <img src="./images/+.png" alt="Live Account" class="inline-block ml-1 " />   
+      Add-Ons
+    </p>
+    <div class="gap-3 flex">
+      <button class="styled-button text-[10px] lg:text-[14px] my-auto justify-center  items-center flex h-[2.5rem]">90/10 Share of Gains</button>
+      <button class="styled-button text-[14px] my-auto justify-center  items-center flex h-[2.5rem]">Bi Weekly Payouts </button>
+    </div>
+   
+
+  </div>
+  <div>
+    <button 
+    class=" h-[51px] w-full md:w-[224px] bg-[#E6E6E6] text-black font-mono px-6 py-[14px] rounded-[4px]  border-[#00000050] border-[1.5px] shadow-[4px_4px_0px_#00000080] transition-all duration-300 hover:bg-white hover:shadow-[0_0_15px_white]"
+    style="box-shadow: inset -6px -6px 0px 0px #7A7A7B;"
+  >
+  Get Funded - $349
+  </button>
+  </div>
+</div>
+
+<br>
+<br>
+<br>
+<br>
+
+
+
+<div>
+  <h1 class="geist font-medium text-[14px] leading-[100%] max-w-[754px] text-center mb-3 mx-auto text-[#7A7A7B]">
+    Trading Platforms
+  </h1>
+
+  <h1 class="geist font-semibold text-[30px] lg:text-[40px] leading-[100%] mb-5 text-center mx-auto text-white">
+    Make Trading Easier with Your Favorite Tools
+  </h1>
+</div>
+
+
+<!--  -->
+<!--  -->
+
+<img src="./images/maketrading easy.png" class="mx-auto lg:hidden" alt="">
+
+<!--  -->
+<!--  -->
+
+<div class="hidden lg:block">
+  <div class="lg:w-[1100px]  mx-auto flex items-center mt-[5rem] justify-evenly gap-10 p-5">
+    <!-- Left Box -->
+    <div class="relative flex items-center justify-center w-[400px] h-[270px] rounded-[16px]"
+         style="background: radial-gradient(79.11% 79.11% at 100% 12.66%, #4C6FC0 0%, #04225E 59.01%, #000712 100%); backdrop-filter: blur(24.8px);">
+      
+      <!-- Enlarged & repositioned background image -->
+      <img src="./images/Match trader 1.png"
+           alt="Matchtrader"
+           class="absolute w-[400px] h-[400px] ml-[110px] mb-[250px] rounded-[16px]">
+  
+      <!-- Overlay content -->
+      <div class="z-10 flex flex-col items-center mb-[250px] justify-center text-white text-center gap-2">
+        <img src="./images/match-trader-logo.png" alt="Match Trader Logo" class="w-32">
+        <p class="geist font-medium text-[14px] leading-[100%] max-w-[754px] text-center mb-3 mx-auto text-[#7A7A7B]">100+ Digital currencies</p>
+      </div>
+    </div>
+  
+    <!-- Center & image -->
+    <div class="flex justify-center  mb-[250px]  items-center z-10">
+      <img src="./images/&.png" alt="And" class="w-[200px] h-[200px]">
+    </div>
+  
+    <!-- Right Box -->
+    <div class="relative flex items-center justify-center w-[400px] h-[270px] rounded-[16px]"
+         style="background: radial-gradient(79.11% 79.11% at 0% 12.66%, #4C6FC0 0%, #04225E 59.01%, #000712 100%); backdrop-filter: blur(24.8px);">
+      
+      <!-- Enlarged & repositioned background image -->
+      <img src="./images/Match trader 1.png"
+           alt="Tradingview"
+           class="absolute w-[400px] h-[400px] mr-[110px] rotate-180 mb-[250px] rounded-[16px]">
+  
+      <!-- Overlay content -->
+      <div class="z-10 flex flex-col items-center justify-center mb-[250px] text-white text-center gap-2">
+        <img src="./images/tradingviewlogo.png" alt="TradingView Logo" class="w-32">
+        <p class="text-sm">100+ Digital currencies</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--  -->
+
+
+
+
+<div>
+ 
+
+  <h1 class="geist font-semibold text-[40px] leading-[100%] mb-5 text-center mx-auto text-white">
+    Evaluation Process
+  </h1>
+
+  <h1 class="geist font-medium text-[14px] leading-[100%] max-w-[520px] text-center mb-3 mx-auto text-[#7A7A7B]">
+    Kickstart your trading journey with a challenge built for growth. No unnecessary rules—just you, your skills, and the opportunity to trade big.
+  </h1>
+</div>
+
+
+<div class="flex flex-wrap justify-evenly mt-[5rem]">
+
+<div class="w-[418px]  lg:border-r border-[#525C71] p-5 ">
+
+  <h1 class="geist font-medium text-[14px] mb-3 leading-[100%] text-[#7A7A7B]">Evaluation</h1>
+  <h1 class="geist font-bold text-[18px] mb-3 leading-[100%] text-white">Noob Arena</h1>
+  <h1 class="geist font-medium text-[14px] leading-[100%] text-[#7A7A7B] md:w-[356px]">Prove your trading skills in a low-pressure 
+    environment. Hit an 8% profit target—no rush, no rigid deadlines, just you mastering the markets.</h1>
+    <img src="./images/5%profit.png" alt="">
+</div>
+
+
+<div class="w-[418px]  lg:border-r  lg:border-[#525C71] p-5">
+
+  <h1 class="geist font-medium text-[14px] mb-3 leading-[100%] text-[#7A7A7B]">Challenge</h1>
+  <h1 class="geist font-bold text-[18px] mb-3 leading-[100%] text-white">OGs Arena </h1>
+  <h1 class="geist font-medium text-[14px] leading-[100%] text-[#7A7A7B] md:w-[356px]">Time to level up. Stay consistent, 
+    navigate market swings, and hit a 5% profit target to prove you're ready for the big leagues.</h1>
+    <img src="./images/8%profit.png" alt="">
+</div>
+
+
+
+<div class="w-[418px] p-5">
+
+  <h1 class="geist font-medium text-[14px] mb-3 leading-[100%] text-[#7A7A7B]">Funded Account</h1>
+  <h1 class="geist font-bold text-[18px] mb-3 leading-[100%] text-white">Degens Arena</h1>
+  <h1 class="geist font-medium text-[14px] leading-[100%] text-[#7A7A7B] md:w-[356px]">You did it! Trade with our capital, 
+    keep 90% of the profits, and enjoy the freedom to execute your strategies without limitations.</h1>
+    <img src="./images/8%profit.png" alt="">
+</div>
+
+
+</div>
+
+
+<!-- BENEFITS AVALABLE  -->
+
+<div class="mt-[5rem]">
+  <h1 class="geist font-medium text-[14px] leading-[100%] max-w-[754px] text-center mb-3 mx-auto text-[#7A7A7B]">
+    Why FundedBits
+  </h1>
+
+  <h1 class="geist font-semibold text-[40px] leading-[100%] mb-10 text-center mx-auto text-white">
+    The Benefits You want are available here
+  </h1>
+</div>
+
+<div class="overflow-hidden relative">
+  <div class="marquee flex items-center gap-10 w-max">
+    <img src="./images/unlock capital.png" class="w-[332px] h-[195px]" alt="">
+    <img src="./images/digitalcurrency.png" class="w-[332px] h-[195px]" alt="">
+    <img src="./images/Frame 1410103994.png" class="w-[332px] h-[195px]" alt="">
+    <!-- Duplicate images for seamless loop -->
+    <img src="./images/unlock capital.png" class="w-[332px] h-[195px]" alt="">
+    <img src="./images/digitalcurrency.png" class="w-[332px] h-[195px]" alt="">
+    <img src="./images/Frame 1410103994.png" class="w-[332px] h-[195px]" alt="">
+  </div>
+</div>
+
+
+<style>
+  @keyframes scrollMarquee {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  
+  .marquee {
+    animation: scrollMarquee 20s linear infinite;
+    will-change: transform;
+  }
+  
+  .marquee:hover {
+    animation-duration: 40s; /* Slows to 0.5x on hover */
+  }
+  </style>
+  
+
+
+<!--  -->
+
+
+<div class="p-5">
+  <div class=" md:w-[596px] h-auto md:h-[60px] justify-evenly md:flex items-center mx-auto mb-3 bg-[#040A14C7] mt-[3.5rem] border-[1px] border-[#1C1C1D] gap-[10px] px-5 py-10 text-[16px] text-[#7A7A7B] rounded-[9px] overflow-hidden relative"
+  style="background: radial-gradient(64.79% 132.5% at 50% 160.83%, rgba(76, 111, 192, 0.6) 0%, rgba(4, 34, 94, 0.6) 59.01%, rgba(0, 0, 0, 0.6) 100%);">
+ <div class="absolute inset-0 rounded-[9px] border-[1.2px] border-transparent pointer-events-none" style="
+   border-image-source: radial-gradient(51.66% 121.29% at 4.85% 0%, #CFDBF7 0%, #04225E 59.01%, rgba(0, 0, 0, 0) 100%);
+   border-image-slice: 1;
+ "></div>
+ <h1 class="text-center ">
+   Join today to experience the rewarding journey ahead!
+ </h1>
+
+<div class="flex justify-center">
+<button class="border-b p-3 cursor-pointer hover:border-b-2 hover:scale-105 duration-300">
+ Get Funded
+</button>
+</div>
+</div>
+</div>
+
+
+
+
+<div class="mt-[5rem]">
+  <h1 class="geist font-medium text-[14px] leading-[100%] max-w-[754px] text-center mb-3 mx-auto text-[#7A7A7B]">
+    Dashboard
+  </h1>
+
+  <h1 class="geist font-semibold text-[40px] leading-[100%] mb-5 text-center mx-auto text-white">
+    Your Trading Hub at a Glance
+  </h1>
+</div>
+
+<div class="flex justify-center">
+<img src="./images/dashboard.png" alt="">
+</div>
+
+
+<div class="mx-auto my-[5rem] md:w-[604px] md:h-[178px] p-3 rounded-[20px] border border-[#1C1C1D]"
+     style="background: radial-gradient(95.74% 113.76% at 104.39% -13.76%, rgba(76, 111, 192, 0.56) 0%, rgba(4, 34, 94, 0.56) 41.43%, rgba(0, 0, 0, 0.56) 100%);">
+     <div class="md:flex justify-evenly md:w-[580px] md:h-[154px] p-5 gap-[44px] rounded-[16px] border border-[#1C1C1D] bg-[#0A0B0C7A]"
+     style="background: linear-gradient(0deg, rgba(10, 11, 12, 0.48), rgba(10, 11, 12, 0.48)), linear-gradient(0deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.08));">
+     <img src="./images/discord.png" class="mb-5" alt="">
+     <div>
+      <h1 class="geist font-medium text-[23px] leading-[100%] max-w-[754px] text- mb-3 mx-auto text-[#D9D9DA]">
+        Trade. Connect. Grow.
+      </h1>
+      
+      <h1 class="geist font-medium text-[14px] leading-[100%] max-w-[754px] text- mb-3 mx-auto text-[#7A7A7B]">
+        Join our Discord community and trade alongside top traders. Get insights, strategies, and real-time market updates!
+      </h1>
+
+     <div class="flex w-[180px]">
+      <h1 class="geist font-medium text-[14px] leading-[100%] max-w-[754px] text- mb-3  text-white">
+        Join the Community
+      </h1>
+      <img src="./images/join-community-arrow.png" class="my-auto" alt="">
+     </div>
+
+     </div>
+    </div>    
+</div>
+
+<!--  -->
+<!--  -->
+<!-- Footer -->
+<!--  -->
+<!--  -->
+<!--  -->
+
+<footer class="px-6 sm:px-10 md:px-[108px] py-[5rem] border-t border-[#7A7A7B59]"
+  style="background: radial-gradient(54.37% 124.75% at 53.04% 84.37%, rgba(76, 111, 192, 0.56) 0%, rgba(4, 34, 94, 0.56) 41.43%, rgba(0, 0, 0, 0.56) 100%);">
+  
+  <div class="flex flex-col lg:flex-row lg:justify-between gap-10">
+    <!-- Logo -->
+    <div class="flex-shrink-0">
+      <a href="./index.html"><img src="./images/navlogo.png" alt="Logo" class="w-[150px]"></a>
+    </div>
+
+    <!-- Useful Links + Legal -->
+    <div class="flex flex-col sm:flex-row gap-10">
+      <div class="space-y-4">
+        <p class="text-[16px] font-medium text-white">Useful Links</p>
+        <ul class="list-none text-[14px] space-y-4 text-[#7A7A7B]">
+          <a href="./affiliate.html"><li class="hover:text-white duration-200 cursor-pointer">Affiliate</li></a>
+          <a href="./faqs.html"><li class="hover:text-white duration-200 cursor-pointer">FAQs</li></a>
+         <a href="./about.html"> <li class="hover:text-white duration-200 cursor-pointer">About Us</li></a>
+          <a href="./blog.html"><li class="hover:text-white duration-200 cursor-pointer">Blog</li></a>
+        </ul>
+      </div>
+
+      <div class="space-y-4">
+        <p class="text-[16px] font-medium text-white">Legal</p>
+        <ul class="list-none text-[14px] space-y-4 text-[#7A7A7B]">
+          <a href="#"><li class="hover:text-white duration-200 cursor-pointer">Terms & Conditions</li></a>
+          <a href="./policy.html"><li class="hover:text-white duration-200 cursor-pointer">Privacy Policy</li></a>
+          <a href=""><li class="hover:text-white duration-200 cursor-pointer">AML Policy</li></a>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Newsletter -->
+    <div class="max-w-xl">
+      <p class="text-[16px] mb-3 font-medium text-white">Subscribe to Newsletter</p>
+      <p class="text-[14px] font-medium text-[#7A7A7B] mb-4">Stay ahead in the trading world! Subscribe for exclusive updates, tips, and funding opportunities.</p>
+
+      <div class="flex flex-col sm:flex-row gap-3">
+        <input type="text" placeholder="e-mail address"
+          class="w-full sm:w-[298px] h-[45px] px-4 py-3 rounded-[8px] border border-[#7A7A7B] text-white placeholder:text-[#7A7A7B] bg-[linear-gradient(0deg,rgba(10,11,12,0.48),rgba(10,11,12,0.48)),linear-gradient(0deg,rgba(255,255,255,0.02),rgba(255,255,255,0.02))]" />
+
+        <button class="px-6 py-2 rounded text-white tracking-wide backdrop-blur-sm transition-all duration-300 border border-transparent"
+          style="border-width: 1px; border-style: solid; border-image-source: linear-gradient(315.99deg, rgba(242, 243, 245, 0.7) 3.89%, rgba(0, 7, 18, 0.7) 94.54%); border-image-slice: 1;">
+          Subscribe
+        </button>
+      </div>
+
+      <!-- Social Icons -->
+      <div class="mt-6 w-[164px] flex justify-between">
+        <img src="./images/smalldiscord.png" alt="">
+        <img src="./images/ig.png" alt="">
+        <img src="./images/x.png" alt="">
+        <img src="./images/youtube.png" alt="">
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom Logo -->
+  <div class="mt-[5rem]">
+    <img src="./images/FUNDEDBITS.png" class="mx-auto" alt="">
+  </div>
+</footer>
+
+
+</body>
+</html>

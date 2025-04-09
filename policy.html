@@ -1,0 +1,310 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="./src/output.css" rel="stylesheet">
+    <title>Policy</title>
+</head>
+<body class="Geist bg-[#000713] text-[#FFFFFF]">
+
+<!-- NAV START -->
+<div class="mx-[2rem] flex justify-center mb-[6rem]    ">
+  
+ <nav class="fixed z-100  bg-[#FFFFFF0F] border  border-[#7A7A7B70] backdrop-blur-xl rounded-[12px] w-full max-w-[900px] mx-auto mt-5 px-5 py-4 text-[#7A7A7B]">
+    <div class="flex justify-between items-center">
+      <!-- Hamburger and Logo -->
+      <div class="flex items-center gap-4">
+        <!-- Hamburger Icon -->
+        <button id="menu-toggle" class="lg:hidden focus:outline-none transition-transform duration-300">
+          <img id="menu-icon" src="images/hamburger.png" alt="Menu" class="w-6 h-6">
+        </button>
+  
+        <!-- Logo -->
+        <a href="./index.html"><img src="images/navlogo.png" alt="Logo" class="w-[121px] md:w-auto  h-6"></a>
+      </div>
+  
+      <!-- Desktop Nav Links -->
+      <ul class="hidden lg:flex items-center list-none gap-[2rem]">
+      <a href="./affiliate.html">  <li class="cursor-pointer duration-200   hover:text-white">Affiliate</li></a>
+      <a href="./faqs.html">  <li class="cursor-pointer duration-200  hover:text-white">FAQs</li></a>
+      <a href="./about.html">  <li class="cursor-pointer duration-200  hover:text-white">About Us</li></a>
+      <a href="./blog.html">  <li class="cursor-pointer duration-200  hover:text-white">Blog</li></a>
+      </ul>
+  
+      <!-- Right Side -->
+      <div class="hidden lg:flex items-center gap-5">
+        <div class="flex gap-2 items-center">
+          <img src="images/dashboardicon.png" alt="">
+          <li class="list-none hover:text-white duration-200 cursor-pointer">Dashboard</li>
+        </div>
+  
+        <button class="px-6 py-2 rounded text-white tracking-wide backdrop-blur-sm transition-all duration-300 border border-transparent" style="
+          border-width: 1px;
+          border-style: solid;
+          border-image-source: linear-gradient(315.99deg, rgba(242, 243, 245, 0.7) 3.89%, rgba(0, 7, 18, 0.7) 94.54%);
+          border-image-slice: 1;
+        ">
+          Get Funded
+        </button>
+      </div>
+      <button class="block lg:hidden px-3 py-2 mt-2 rounded text-white tracking-wide text-[14px] backdrop-blur-sm transition-all duration-300 border border-transparent" style="
+      border-width: 1px;
+      border-style: solid;
+      border-image-source: linear-gradient(315.99deg, rgba(242, 243, 245, 0.7) 3.89%, rgba(0, 7, 18, 0.7) 94.54%);
+      border-image-slice: 1;
+    ">
+      Get Funded
+    </button>
+    </div>
+ 
+
+  </nav>
+  
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobile-menu" class="fixed z-100 lg:hidden mt-[7rem] backdrop-blur-sm w-full hidden animate-fade-in-down">
+      <div class="w-full px-4 py-6 bg-[#FFFFFF0F] border border-[#7A7A7B70] rounded-[12px] flex flex-col items-center gap-4">
+        <ul class="flex flex-col items-center gap-4 list-none w-full">
+         <a href="./affiliate.html"> <li class="cursor-pointer w-full  hover:text-white text-center">Affiliate</li></a>
+         <a href="./faqs.html"> <li class="cursor-pointer w-full  hover:text-white text-center">FAQs</li></a>
+         <a href="./about.html"> <li class="cursor-pointer w-full  hover:text-white text-center">About Us</li></a>
+         <a href="./blog.html"> <li class="cursor-pointer w-full  hover:text-white text-center">Blog</li></a>
+          <li class="flex justify-center cursor-pointer hover:text-white duration-200 gap-2 items-center bg-[#FFFFFF0F] w-full px-4 py-2 rounded-[8px]">
+            <img src="images/dashboardicon.png" alt="">
+            Dashboard
+          </li>
+        </ul>
+      </div>
+    </div>
+
+
+
+  <style>
+    @keyframes fade-in-down {
+      0% {
+        opacity: 0;
+        transform: translateY(-10px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .animate-fade-in-down {
+      animation: fade-in-down 0.3s ease-out;
+    }
+  </style>
+  
+  <script>
+    const menuToggle = document.getElementById("menu-toggle");
+    const menuIcon = document.getElementById("menu-icon");
+    const mobileMenu = document.getElementById("mobile-menu");
+  
+    let menuOpen = false;
+    menuToggle.addEventListener("click", () => {
+      menuOpen = !menuOpen;
+      mobileMenu.classList.toggle("hidden");
+      menuIcon.src = menuOpen ? "images/cancle.png" : "images/hamburger.png";
+    });
+  </script>
+   
+</div>
+
+   <!-- NAV END  -->
+
+
+
+    <div class="w-full p-5 lg:w-[1160px] mx-auto">
+
+<div class="mx-4 lg:mx-[5rem]">
+
+<div class=" w- mx-auto ">
+
+    <h1 class="geist font-medium text-[14px] font-mono text-[#7A7A7B] my-7">Last updated on 1st April, 2025</h1>
+<h1 class="geist font-semibold text-[40px] leading-[100%] w-full lg:w-[650px]  text-[#FFFFFF]">
+    FundedBits Privacy Policy
+  </h1>
+<br>
+
+
+<!-- 1 -->
+  <h1 class="geist font-semibold text -[18px] leading-[100%] w-full lg:w-[650px] my-5 text-[#FFFFFF]">
+    Information Collection:
+</h1>
+
+<h1 class="geist font-medium text-[18px] text-[#7A7A7B]">
+    We collect personal information such as name, email, and financial details when you sign up, use our services, or interact with our platform. We may collect additional information to improve your user experience, such as IP addresses, device types, and browsing patterns.
+</h1>
+
+
+
+
+
+<!-- 2 -->
+  <h1 class="geist font-semibold text -[18px] leading-[100%] w-full lg:w-[650px] my-5 text-[#FFFFFF]">
+    Data Usage:
+</h1>
+
+<h1 class="geist font-medium text-[18px] text-[#7A7A7B]">
+    The collected data helps us provide better services, personalize your experience, process transactions, and ensure the security of our platform. We do not share your information with unauthorized third parties.
+</h1>
+
+
+
+
+
+<!-- 3 -->
+  <h1 class="geist font-semibold text -[18px] leading-[100%] w-full lg:w-[650px] my-5 text-[#FFFFFF]">
+    Cookies:
+</h1>
+
+<h1 class="geist font-medium text-[18px] text-[#7A7A7B]">
+    We use cookies to enhance the functionality of our website and gather information about how users interact with our platform. Users can manage cookie preferences via browser settings.
+</h1>
+
+
+
+
+
+<!-- 4 -->
+  <h1 class="geist font-semibold text -[18px] leading-[100%] w-full lg:w-[650px] my-5 text-[#FFFFFF]">
+    Third-Party Services:
+</h1>
+
+<h1 class="geist font-medium text-[18px] text-[#7A7A7B]">
+    We may share data with trusted third-party service providers who help us operate our platform, process payments, and provide customer support. These providers are bound by confidentiality agreements.
+</h1>
+
+
+
+
+
+<!-- 5 -->
+  <h1 class="geist font-semibold text -[18px] leading-[100%] w-full lg:w-[650px] my-5 text-[#FFFFFF]">
+    Data Security:
+</h1>
+
+<h1 class="geist font-medium text-[18px] text-[#7A7A7B]">
+    FundedBits employs encryption and secure storage to protect your personal information from unauthorized access. We routinely update our systems to comply with evolving security standards.
+</h1>
+
+
+
+
+
+<!-- 6 -->
+  <h1 class="geist font-semibold text -[18px] leading-[100%] w-full lg:w-[650px] my-5 text-[#FFFFFF]">
+    User Rights:
+</h1>
+
+<h1 class="geist font-medium text-[18px] text-[#7A7A7B]">
+    You have the right to access, correct, or delete your personal data at any time. You may also request information about how we process your data and object to certain processing activities, such as marketing communications.
+</h1>
+
+
+
+
+
+<!-- 7 -->
+  <h1 class="geist font-semibold text -[18px] leading-[100%] w-full lg:w-[650px] my-5 text-[#FFFFFF]">
+    Changes to the Privacy Policy:
+</h1>
+
+<h1 class="geist font-medium text-[18px] text-[#7A7A7B]">
+    We may update our Privacy Policy periodically. Any changes will be communicated through our platform, and continued use of our services implies acceptance of the updated terms.
+</h1>
+
+
+
+
+
+<!-- 8 -->
+  <h1 class="geist font-semibold text -[18px] leading-[100%] w-full lg:w-[650px] my-5 text-[#FFFFFF]">
+    Contact Us:
+</h1>
+
+<h1 class="geist font-medium text-[18px] text-[#7A7A7B]">
+    For questions about your personal data or this policy, please contact us at hey@fundedbits.com
+</h1>
+
+
+</div>
+</div>
+    </div>
+
+
+
+    <!--  -->
+<!--  -->
+<!-- Footer -->
+<!--  -->
+<!--  -->
+<!--  -->
+
+<footer class="px-6 sm:px-10 md:px-[108px] py-[5rem] border-t border-[#7A7A7B59]"
+style="background: radial-gradient(54.37% 124.75% at 53.04% 84.37%, rgba(76, 111, 192, 0.56) 0%, rgba(4, 34, 94, 0.56) 41.43%, rgba(0, 0, 0, 0.56) 100%);">
+
+<div class="flex flex-col lg:flex-row lg:justify-between gap-10">
+  <!-- Logo -->
+  <div class="flex-shrink-0">
+    <a href="./index.html"><img src="./images/navlogo.png" alt="Logo" class="w-[150px]"></a>
+  </div>
+
+  <!-- Useful Links + Legal -->
+  <div class="flex flex-col sm:flex-row gap-10">
+    <div class="space-y-4">
+      <p class="text-[16px] font-medium text-white">Useful Links</p>
+      <ul class="list-none text-[14px] space-y-4 text-[#7A7A7B]">
+        <a href="./affiliate.html"><li class="hover:text-white duration-200 cursor-pointer">Affiliate</li></a>
+        <a href="./faqs.html"><li class="hover:text-white duration-200 cursor-pointer">FAQs</li></a>
+       <a href="./about.html"> <li class="hover:text-white duration-200 cursor-pointer">About Us</li></a>
+        <a href="./blog.html"><li class="hover:text-white duration-200 cursor-pointer">Blog</li></a>
+      </ul>
+    </div>
+
+    <div class="space-y-4">
+      <p class="text-[16px] font-medium text-white">Legal</p>
+      <ul class="list-none text-[14px] space-y-4 text-[#7A7A7B]">
+        <a href="#"><li class="hover:text-white duration-200 cursor-pointer">Terms & Conditions</li></a>
+        <a href="./policy.html"><li class="hover:text-white duration-200 cursor-pointer">Privacy Policy</li></a>
+        <a href=""><li class="hover:text-white duration-200 cursor-pointer">AML Policy</li></a>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Newsletter -->
+  <div class="max-w-xl">
+    <p class="text-[16px] mb-3 font-medium text-white">Subscribe to Newsletter</p>
+    <p class="text-[14px] font-medium text-[#7A7A7B] mb-4">Stay ahead in the trading world! Subscribe for exclusive updates, tips, and funding opportunities.</p>
+
+    <div class="flex flex-col sm:flex-row gap-3">
+      <input type="text" placeholder="e-mail address"
+        class="w-full sm:w-[298px] h-[45px] px-4 py-3 rounded-[8px] border border-[#7A7A7B] text-white placeholder:text-[#7A7A7B] bg-[linear-gradient(0deg,rgba(10,11,12,0.48),rgba(10,11,12,0.48)),linear-gradient(0deg,rgba(255,255,255,0.02),rgba(255,255,255,0.02))]" />
+
+      <button class="px-6 py-2 rounded text-white tracking-wide backdrop-blur-sm transition-all duration-300 border border-transparent"
+        style="border-width: 1px; border-style: solid; border-image-source: linear-gradient(315.99deg, rgba(242, 243, 245, 0.7) 3.89%, rgba(0, 7, 18, 0.7) 94.54%); border-image-slice: 1;">
+        Subscribe
+      </button>
+    </div>
+
+    <!-- Social Icons -->
+    <div class="mt-6 w-[164px] flex justify-between">
+      <img src="./images/smalldiscord.png" alt="">
+      <img src="./images/ig.png" alt="">
+      <img src="./images/x.png" alt="">
+      <img src="./images/youtube.png" alt="">
+    </div>
+  </div>
+</div>
+
+<!-- Bottom Logo -->
+<div class="mt-[5rem]">
+  <img src="./images/FUNDEDBITS.png" class="mx-auto" alt="">
+</div>
+</footer>
+</body>
+</html>

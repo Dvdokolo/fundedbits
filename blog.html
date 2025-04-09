@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="./src/output.css" rel="stylesheet">
+    <title>blog</title>
+</head>
+<body class="Geist bg-[#000713] text-[#FFFFFF]">
+    
+<!-- hero  -->
+<!--  -->
+<!--  -->
+<!--  -->
+
+    <div class="relative h-[400px] md:h-[400px] bg-cover bg-center bg-no-repeat" style="background-image: url('./images/FAQ-bg.png');">
+
+      
+ <!-- NAV START -->
+<div class="mx-[2rem] flex justify-center mb-[6rem]    ">
+  
+ <nav class="fixed z-100  bg-[#FFFFFF0F] border  border-[#7A7A7B70] backdrop-blur-xl rounded-[12px] w-full max-w-[900px] mx-auto mt-5 px-5 py-4 text-[#7A7A7B]">
+    <div class="flex justify-between items-center">
+      <!-- Hamburger and Logo -->
+      <div class="flex items-center gap-4">
+        <!-- Hamburger Icon -->
+        <button id="menu-toggle" class="lg:hidden focus:outline-none transition-transform duration-300">
+          <img id="menu-icon" src="images/hamburger.png" alt="Menu" class="w-6 h-6">
+        </button>
+  
+        <!-- Logo -->
+        <a href="./index.html"><img src="images/navlogo.png" alt="Logo" class="w-[121px] md:w-auto  h-6"></a>
+      </div>
+  
+      <!-- Desktop Nav Links -->
+      <ul class="hidden lg:flex items-center list-none gap-[2rem]">
+      <a href="./affiliate.html">  <li class="cursor-pointer duration-200   hover:text-white">Affiliate</li></a>
+      <a href="./faqs.html">  <li class="cursor-pointer duration-200  hover:text-white">FAQs</li></a>
+      <a href="./about.html">  <li class="cursor-pointer duration-200  hover:text-white">About Us</li></a>
+      <a href="./blog.html">  <li class="cursor-pointer duration-200  hover:text-white">Blog</li></a>
+      </ul>
+  
+      <!-- Right Side -->
+      <div class="hidden lg:flex items-center gap-5">
+        <div class="flex gap-2 items-center">
+          <img src="images/dashboardicon.png" alt="">
+          <li class="list-none hover:text-white duration-200 cursor-pointer">Dashboard</li>
+        </div>
+  
+        <button class="px-6 py-2 rounded text-white tracking-wide backdrop-blur-sm transition-all duration-300 border border-transparent" style="
+          border-width: 1px;
+          border-style: solid;
+          border-image-source: linear-gradient(315.99deg, rgba(242, 243, 245, 0.7) 3.89%, rgba(0, 7, 18, 0.7) 94.54%);
+          border-image-slice: 1;
+        ">
+          Get Funded
+        </button>
+      </div>
+      <button class="block lg:hidden px-3 py-2 mt-2 rounded text-white tracking-wide text-[14px] backdrop-blur-sm transition-all duration-300 border border-transparent" style="
+      border-width: 1px;
+      border-style: solid;
+      border-image-source: linear-gradient(315.99deg, rgba(242, 243, 245, 0.7) 3.89%, rgba(0, 7, 18, 0.7) 94.54%);
+      border-image-slice: 1;
+    ">
+      Get Funded
+    </button>
+    </div>
+ 
+
+  </nav>
+  
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobile-menu" class="fixed z-100 lg:hidden mt-[7rem] backdrop-blur-sm w-full hidden animate-fade-in-down">
+      <div class="w-full px-4 py-6 bg-[#FFFFFF0F] border border-[#7A7A7B70] rounded-[12px] flex flex-col items-center gap-4">
+        <ul class="flex flex-col items-center gap-4 list-none w-full">
+         <a href="./affiliate.html"> <li class="cursor-pointer w-full  hover:text-white text-center">Affiliate</li></a>
+         <a href="./faqs.html"> <li class="cursor-pointer w-full  hover:text-white text-center">FAQs</li></a>
+         <a href="./about.html"> <li class="cursor-pointer w-full  hover:text-white text-center">About Us</li></a>
+         <a href="./blog.html"> <li class="cursor-pointer w-full  hover:text-white text-center">Blog</li></a>
+          <li class="flex justify-center cursor-pointer hover:text-white duration-200 gap-2 items-center bg-[#FFFFFF0F] w-full px-4 py-2 rounded-[8px]">
+            <img src="images/dashboardicon.png" alt="">
+            Dashboard
+          </li>
+        </ul>
+      </div>
+    </div>
+
+
+
+  <style>
+    @keyframes fade-in-down {
+      0% {
+        opacity: 0;
+        transform: translateY(-10px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .animate-fade-in-down {
+      animation: fade-in-down 0.3s ease-out;
+    }
+  </style>
+  
+  <script>
+    const menuToggle = document.getElementById("menu-toggle");
+    const menuIcon = document.getElementById("menu-icon");
+    const mobileMenu = document.getElementById("mobile-menu");
+  
+    let menuOpen = false;
+    menuToggle.addEventListener("click", () => {
+      menuOpen = !menuOpen;
+      mobileMenu.classList.toggle("hidden");
+      menuIcon.src = menuOpen ? "images/cancle.png" : "images/hamburger.png";
+    });
+  </script>
+   
+</div>
+
+   <!-- NAV END  -->
+
+
+
+        <div class="p-6 flex justify-center pt-[4rem] md:pt-[7rem]">
+          <h1 class="geist  text-center font-semibold text0[40px] lg:text-[60px] leading-[100%] mx-auto text-[#FFFFFF]">
+            Blog
+          </h1>
+
+        </div>
+<div class="flex justify-center">
+    
+    <h1 class="geist font-medium text-center w-[666px] text-[14px] text-[#7A7A7B] mb-5">
+        Get quick answers to your most common questions about FundedBits- from our evaluation process to profit withdrawals—all in one place
+    </h1>
+</div>
+    </div>
+
+
+    <div class="lg:flex justify-between p-5 lg:w-[1128px] gap-[20px] space-y-10 lg:space-y-0 mx-auto my-[5rem]">
+        <div class="flex justify-center">
+          <img src="./images/rocket.png" alt="">
+        </div>
+      
+        <div class="flex flex-col justify-between lg:w-[508px] mx-auto">
+          <div>
+            <h1 class="geist font-medium text-[14px] text-[#7A7A7B]">15 March, 2025 | 6 min read</h1>
+            <h1 class="geist font-semibold text-[24px] text-white mb-1">
+              New Prop Trading Firm Disrupts the Market with Revolutionary Funding Model
+            </h1>
+            <h1 class="geist font-medium text-[14px] text-[#7A7A7B]">
+              Discover how this new firm is changing the game with innovative funding models that cater to both novice and experienced traders. Get funded faster and with more flexibility.
+            </h1>
+          </div>
+      
+          <div class="flex gap-3 mt-4">
+            <button class=" text-[12px] px-3 py-1.5 border-2 border-[#1C1C1D] rounded-[4px] text-[#7A7A7B]">
+              Prop Trading
+            </button>
+            <button class="text-[12px] px-3 py-1.5 border-2 border-[#1C1C1D] rounded-[4px] text-[#7A7A7B]">
+                Funding Models
+            </button>
+            <button class=" text-[12px] px-3 py-1.5 border-2 border-[#1C1C1D] rounded-[4px] text-[#7A7A7B]">
+                Trading Opportunities
+            </button>
+          </div>
+        </div>
+      </div>
+      
+<div class="lg:w-[1160px] mx-auto">
+    
+
+    <h1 class="geist font-semibold text-[32px] mx-4 lg:mx-0 text-white mb-1">
+        Recent Posts
+      </h1>
+
+      <ul class="flex items-center gap-4 px-2 md:px-0 text-[#7A7A7B] text-[14px] list-none mx-4 lg:mx-0 mb-6 overflow-x-auto whitespace-nowrap scrollbar-hide md:justify-evenly">
+        <li class="px-4 py-2 rounded-full hover: transition-colors cursor-pointer bg-[#0F1011]">All</li>
+        <li class="px-4 py-2 rounded-full hover:bg-[#0F1011] transition-colors cursor-pointer">Automation & AI</li>
+        <li class="px-4 py-2 rounded-full hover:bg-[#0F1011] transition-colors cursor-pointer">Funding Models</li>
+        <li class="px-4 py-2 rounded-full hover:bg-[#0F1011] transition-colors cursor-pointer">Prop Trading</li>
+        <li class="px-4 py-2 rounded-full hover:bg-[#0F1011] transition-colors cursor-pointer">Risk Management</li>
+        <li class="px-4 py-2 rounded-full hover:bg-[#0F1011] transition-colors cursor-pointer">Trading Opportunities</li>
+        <li class="px-4 py-2 rounded-full hover:bg-[#0F1011] transition-colors cursor-pointer">Trading Psychology</li>
+      
+        <!-- Search bar inside nav -->
+        <li class="relative w-[230px] min-w-[230px] h-[42px] rounded-full overflow-hidden flex-shrink-0">
+          <img src="./images/search-icon.png" alt="search" class="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 pointer-events-none" />
+          <input
+            type="text"
+            placeholder="Search posts"
+            class="w-full h-full pl-12 pr-4 py-[20px] text-white text-[14px] placeholder-white border rounded-full"
+            style="
+              background: linear-gradient(0deg, rgba(10, 11, 12, 0.48), rgba(10, 11, 12, 0.48)),
+                          linear-gradient(0deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.06));
+              border-image: linear-gradient(218.4deg, #525C71 0%, #000712 70.84%) 1;
+              border-radius: 44px;
+            "
+          />
+        </li>
+      </ul>
+
+<div class="flex flex-wrap justify-between p-5 space-y-15 mx-auto">
+
+    <!-- 1 -->
+    
+    <div class=" w-[344px] mx-auto ">
+        <img src="./images/blank.png" alt="">
+        <div>
+            <h1 class="geist font-medium text-[14px] text-[#7A7A7B] mt-3">15 September, 2024 | 2 min read</h1>
+            <h1 class="geist font-semibold text-[18px] text-white mb-1">
+                New Prop Trading Firm Disrupts the Market with Revolutionary Funding Model
+            </h1>
+            <h1 class="geist font-normal text-[14px] text-[#7A7A7B]">
+                Discover how this new firm is changing the game with innovative funding models that cater to both no..
+            </h1>
+          </div>
+      </div>
+
+
+      
+    <!-- 1 -->
+    
+    <div class=" w-[344px] mx-auto ">
+        <img src="./images/blank.png" alt="">
+        <div>
+            <h1 class="geist font-medium text-[14px] text-[#7A7A7B] mt-3">15 September, 2024 | 2 min read</h1>
+            <h1 class="geist font-semibold text-[18px] text-white mb-1">
+                New Prop Trading Firm Disrupts the Market with Revolutionary Funding Model
+            </h1>
+            <h1 class="geist font-normal text-[14px] text-[#7A7A7B]">
+                Discover how this new firm is changing the game with innovative funding models that cater to both no..
+            </h1>
+          </div>
+      </div>
+
+
+      
+    <!-- 1 -->
+    
+    <div class=" w-[344px] mx-auto ">
+        <img src="./images/blank.png" alt="">
+        <div>
+            <h1 class="geist font-medium text-[14px] text-[#7A7A7B] mt-3">15 September, 2024 | 2 min read</h1>
+            <h1 class="geist font-semibold text-[18px] text-white mb-1">
+                New Prop Trading Firm Disrupts the Market with Revolutionary Funding Model
+            </h1>
+            <h1 class="geist font-normal text-[14px] text-[#7A7A7B]">
+                Discover how this new firm is changing the game with innovative funding models that cater to both no..
+            </h1>
+          </div>
+      </div>
+
+
+      
+    <!-- 1 -->
+    
+    <div class=" w-[344px] mx-auto ">
+        <img src="./images/blank.png" alt="">
+        <div>
+            <h1 class="geist font-medium text-[14px] text-[#7A7A7B] mt-3">15 September, 2024 | 2 min read</h1>
+            <h1 class="geist font-semibold text-[18px] text-white mb-1">
+                New Prop Trading Firm Disrupts the Market with Revolutionary Funding Model
+            </h1>
+            <h1 class="geist font-normal text-[14px] text-[#7A7A7B]">
+                Discover how this new firm is changing the game with innovative funding models that cater to both no..
+            </h1>
+          </div>
+      </div>
+
+
+      
+    <!-- 1 -->
+    
+    <div class=" w-[344px] mx-auto ">
+        <img src="./images/blank.png" alt="">
+        <div>
+            <h1 class="geist font-medium text-[14px] text-[#7A7A7B] mt-3">15 September, 2024 | 2 min read</h1>
+            <h1 class="geist font-semibold text-[18px] text-white mb-1">
+                New Prop Trading Firm Disrupts the Market with Revolutionary Funding Model
+            </h1>
+            <h1 class="geist font-normal text-[14px] text-[#7A7A7B]">
+                Discover how this new firm is changing the game with innovative funding models that cater to both no..
+            </h1>
+          </div>
+      </div>
+
+
+      
+    <!-- 1 -->
+    
+    <div class=" w-[344px] mx-auto ">
+        <img src="./images/blank.png" alt="">
+        <div>
+            <h1 class="geist font-medium text-[14px] text-[#7A7A7B] mt-3">15 September, 2024 | 2 min read</h1>
+            <h1 class="geist font-semibold text-[18px] text-white mb-1">
+                New Prop Trading Firm Disrupts the Market with Revolutionary Funding Model
+            </h1>
+            <h1 class="geist font-normal text-[14px] text-[#7A7A7B]">
+                Discover how this new firm is changing the game with innovative funding models that cater to both no..
+            </h1>
+          </div>
+      </div>
+
+
+
+
+      
+
+</div>
+      
+     
+
+</div>
+
+
+
+<!--  -->
+<!--  -->
+<!-- Footer -->
+<!--  -->
+<!--  -->
+<!--  -->
+
+<footer class="px-6 sm:px-10 md:px-[108px] py-[5rem] border-t border-[#7A7A7B59]"
+  style="background: radial-gradient(54.37% 124.75% at 53.04% 84.37%, rgba(76, 111, 192, 0.56) 0%, rgba(4, 34, 94, 0.56) 41.43%, rgba(0, 0, 0, 0.56) 100%);">
+  
+  <div class="flex flex-col lg:flex-row lg:justify-between gap-10">
+    <!-- Logo -->
+    <div class="flex-shrink-0">
+      <a href="./index.html"><img src="./images/navlogo.png" alt="Logo" class="w-[150px]"></a>
+    </div>
+
+    <!-- Useful Links + Legal -->
+    <div class="flex flex-col sm:flex-row gap-10">
+      <div class="space-y-4">
+        <p class="text-[16px] font-medium text-white">Useful Links</p>
+        <ul class="list-none text-[14px] space-y-4 text-[#7A7A7B]">
+          <a href="./affiliate.html"><li class="hover:text-white duration-200 cursor-pointer">Affiliate</li></a>
+          <a href="./faqs.html"><li class="hover:text-white duration-200 cursor-pointer">FAQs</li></a>
+         <a href="./about.html"> <li class="hover:text-white duration-200 cursor-pointer">About Us</li></a>
+          <a href="./blog.html"><li class="hover:text-white duration-200 cursor-pointer">Blog</li></a>
+        </ul>
+      </div>
+
+      <div class="space-y-4">
+        <p class="text-[16px] font-medium text-white">Legal</p>
+        <ul class="list-none text-[14px] space-y-4 text-[#7A7A7B]">
+          <a href="#"><li class="hover:text-white duration-200 cursor-pointer">Terms & Conditions</li></a>
+          <a href="./policy.html"><li class="hover:text-white duration-200 cursor-pointer">Privacy Policy</li></a>
+          <a href=""><li class="hover:text-white duration-200 cursor-pointer">AML Policy</li></a>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Newsletter -->
+    <div class="max-w-xl">
+      <p class="text-[16px] mb-3 font-medium text-white">Subscribe to Newsletter</p>
+      <p class="text-[14px] font-medium text-[#7A7A7B] mb-4">Stay ahead in the trading world! Subscribe for exclusive updates, tips, and funding opportunities.</p>
+
+      <div class="flex flex-col sm:flex-row gap-3">
+        <input type="text" placeholder="e-mail address"
+          class="w-full sm:w-[298px] h-[45px] px-4 py-3 rounded-[8px] border border-[#7A7A7B] text-white placeholder:text-[#7A7A7B] bg-[linear-gradient(0deg,rgba(10,11,12,0.48),rgba(10,11,12,0.48)),linear-gradient(0deg,rgba(255,255,255,0.02),rgba(255,255,255,0.02))]" />
+
+        <button class="px-6 py-2 rounded text-white tracking-wide backdrop-blur-sm transition-all duration-300 border border-transparent"
+          style="border-width: 1px; border-style: solid; border-image-source: linear-gradient(315.99deg, rgba(242, 243, 245, 0.7) 3.89%, rgba(0, 7, 18, 0.7) 94.54%); border-image-slice: 1;">
+          Subscribe
+        </button>
+      </div>
+
+      <!-- Social Icons -->
+      <div class="mt-6 w-[164px] flex justify-between">
+        <img src="./images/smalldiscord.png" alt="">
+        <img src="./images/ig.png" alt="">
+        <img src="./images/x.png" alt="">
+        <img src="./images/youtube.png" alt="">
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom Logo -->
+  <div class="mt-[5rem]">
+    <img src="./images/FUNDEDBITS.png" class="mx-auto" alt="">
+  </div>
+</footer>
+
+</body>
+</html>

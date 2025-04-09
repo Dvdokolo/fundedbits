@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="./src/output.css" rel="stylesheet">
+    <title>faqs</title>
+</head>
+<body class="Geist bg-[#000713] text-[#FFFFFF]">
+  
+    
+<!-- hero  -->
+<!--  -->
+<!--  -->
+<!--  -->
+
+    <div class="relative h-[400px] md:h-[400px] bg-cover bg-center bg-no-repeat" style="background-image: url('./images/FAQ-bg.png');">
+
+<!-- NAV START -->
+<div class="mx-[2rem] flex justify-center mb-[6rem]    ">
+  
+ <nav class="fixed z-100  bg-[#FFFFFF0F] border  border-[#7A7A7B70] backdrop-blur-xl rounded-[12px] w-full max-w-[900px] mx-auto mt-5 px-5 py-4 text-[#7A7A7B]">
+    <div class="flex justify-between items-center">
+      <!-- Hamburger and Logo -->
+      <div class="flex items-center gap-4">
+        <!-- Hamburger Icon -->
+        <button id="menu-toggle" class="lg:hidden focus:outline-none transition-transform duration-300">
+          <img id="menu-icon" src="images/hamburger.png" alt="Menu" class="w-6 h-6">
+        </button>
+  
+        <!-- Logo -->
+        <a href="./index.html"><img src="images/navlogo.png" alt="Logo" class="w-[121px] md:w-auto  h-6"></a>
+      </div>
+  
+      <!-- Desktop Nav Links -->
+      <ul class="hidden lg:flex items-center list-none gap-[2rem]">
+      <a href="./affiliate.html">  <li class="cursor-pointer duration-200   hover:text-white">Affiliate</li></a>
+      <a href="./faqs.html">  <li class="cursor-pointer duration-200  hover:text-white">FAQs</li></a>
+      <a href="./about.html">  <li class="cursor-pointer duration-200  hover:text-white">About Us</li></a>
+      <a href="./blog.html">  <li class="cursor-pointer duration-200  hover:text-white">Blog</li></a>
+      </ul>
+  
+      <!-- Right Side -->
+      <div class="hidden lg:flex items-center gap-5">
+        <div class="flex gap-2 items-center">
+          <img src="images/dashboardicon.png" alt="">
+          <li class="list-none hover:text-white duration-200 cursor-pointer">Dashboard</li>
+        </div>
+  
+        <button class="px-6 py-2 rounded text-white tracking-wide backdrop-blur-sm transition-all duration-300 border border-transparent" style="
+          border-width: 1px;
+          border-style: solid;
+          border-image-source: linear-gradient(315.99deg, rgba(242, 243, 245, 0.7) 3.89%, rgba(0, 7, 18, 0.7) 94.54%);
+          border-image-slice: 1;
+        ">
+          Get Funded
+        </button>
+      </div>
+      <button class="block lg:hidden px-3 py-2 mt-2 rounded text-white tracking-wide text-[14px] backdrop-blur-sm transition-all duration-300 border border-transparent" style="
+      border-width: 1px;
+      border-style: solid;
+      border-image-source: linear-gradient(315.99deg, rgba(242, 243, 245, 0.7) 3.89%, rgba(0, 7, 18, 0.7) 94.54%);
+      border-image-slice: 1;
+    ">
+      Get Funded
+    </button>
+    </div>
+ 
+
+  </nav>
+  
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobile-menu" class="fixed z-100 lg:hidden mt-[7rem] backdrop-blur-sm w-full hidden animate-fade-in-down">
+      <div class="w-full px-4 py-6 bg-[#FFFFFF0F] border border-[#7A7A7B70] rounded-[12px] flex flex-col items-center gap-4">
+        <ul class="flex flex-col items-center gap-4 list-none w-full">
+         <a href="./affiliate.html"> <li class="cursor-pointer w-full  hover:text-white text-center">Affiliate</li></a>
+         <a href="./faqs.html"> <li class="cursor-pointer w-full  hover:text-white text-center">FAQs</li></a>
+         <a href="./about.html"> <li class="cursor-pointer w-full  hover:text-white text-center">About Us</li></a>
+         <a href="./blog.html"> <li class="cursor-pointer w-full  hover:text-white text-center">Blog</li></a>
+          <li class="flex justify-center cursor-pointer hover:text-white duration-200 gap-2 items-center bg-[#FFFFFF0F] w-full px-4 py-2 rounded-[8px]">
+            <img src="images/dashboardicon.png" alt="">
+            Dashboard
+          </li>
+        </ul>
+      </div>
+    </div>
+
+
+
+  <style>
+    @keyframes fade-in-down {
+      0% {
+        opacity: 0;
+        transform: translateY(-10px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .animate-fade-in-down {
+      animation: fade-in-down 0.3s ease-out;
+    }
+  </style>
+  
+  <script>
+    const menuToggle = document.getElementById("menu-toggle");
+    const menuIcon = document.getElementById("menu-icon");
+    const mobileMenu = document.getElementById("mobile-menu");
+  
+    let menuOpen = false;
+    menuToggle.addEventListener("click", () => {
+      menuOpen = !menuOpen;
+      mobileMenu.classList.toggle("hidden");
+      menuIcon.src = menuOpen ? "images/cancle.png" : "images/hamburger.png";
+    });
+  </script>
+   
+</div>
+
+   <!-- NAV END  -->
+
+
+
+
+
+        <div class="p-6 flex justify-center pt-[4rem] md:pt-[7rem]">
+          <h1 class="geist  text-center font-semibold text-[40px] md:text-[60px] leading-[100%] mx-auto text-[#FFFFFF]">
+            FAQs
+          </h1>
+
+        </div>
+<div class="flex justify-center">
+    
+    <h1 class="geist font-medium text-center w-[666px] text-[14px] text-[#7A7A7B] mb-5">
+        We understand the challenges, so we created a platform that puts you first—equipping you with everything you need to succeed.
+    </h1>
+</div>
+    </div>
+
+
+
+<!--  -->
+    <!-- search  -->
+     <!--  -->
+
+
+    <div class="flex justify-center mt-[5rem] "> <!-- This centers it -->
+        <div class="relative w-[722px] h-[61px] rounded-full overflow-hidden">
+          <!-- Search Icon -->
+          <img src="./images/search-icon.png" alt="search" class="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 pointer-events-none">
+      
+          <!-- Input Field -->
+          <input
+            type="text"
+            placeholder="Search posts"
+            class="w-full h-full pl-12 pr-4 py-[20px] text-white text-[16px] bg-[rgba(10,11,12,0.48)] placeholder-white border-[1px] border-solid rounded-full"
+            style="
+              background: linear-gradient(0deg, rgba(10, 11, 12, 0.48), rgba(10, 11, 12, 0.48)), 
+                          linear-gradient(0deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.06));
+              border-image: linear-gradient(218.4deg, #525C71 0%, #000712 70.84%) 1;
+              border-radius: 44px;
+            "
+          />
+        </div>
+      </div>
+      <br>
+      <br>
+<!--  -->
+<!--  -->
+<!-- dropdowns  -->
+ <!--  -->
+ <!--  -->
+ <!--  -->
+
+
+
+ <div class="flex flex-col gap-6 mx-5 mb-[5rem]">
+  <!--  FAQ CARD START -->
+    <!-- 1 -->
+
+  <div class="faq-card bg-[#0A0B0C7A] p-5 rounded-[8px] w-full lg:w-[890px] mx-auto border border-[#1C1C1D] transition-all duration-500" 
+  style="background: linear-gradient(0deg, rgba(10, 11, 12, 0.48), rgba(10, 11, 12, 0.48)), linear-gradient(0deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.08));">
+    <div class="flex justify-between items-start">
+      <div class="flex gap-5">
+        <div class="flex justify-center items-center min-w-[72px] min-h-[72px]">
+          <img src="./images/grneralquestions.png" alt="" class="w-[72px] h-[72px] object-contain transition-all duration-300">
+        </div>
+        <div>
+          <h1 class="geist font-semibold text-[20px] text-white mb-1">General Questions</h1>
+          <h1 class="geist font-medium text-[14px] text-[#7A7A7B]">4 Topics</h1>
+        </div>
+      </div>
+      <button class="toggle-btn bg-[#000713] rounded-[10px] h-[32px] mt-5 w-[32px] flex items-center justify-center transition-all">
+        <img src="./images/arrowdown.png" alt="" class="toggle-icon duration-300">
+      </button>
+    </div>
+
+    <div class="faq-content max-h-0 overflow-hidden transition-all duration-700 ease-in-out mt-5 border-t w-full lg:w-[757px] border-[#1C1C1D] pt-4 hidden">
+      <!-- FAQ content goes here -->
+      <div class="mb-5">
+        <h1 class="geist font-semibold text-[20px] mb-1 text-white">What is FundedBits?</h1>
+        <p class="geist font-medium text-[14px] text-[#7A7A7B]">FundedBits is a proprietary trading firm that provides capital to skilled traders, allowing them to trade forex, crypto, and other markets without risking personal funds.</p>
+      </div>
+      <div class="mb-5">
+        <h1 class="geist font-semibold text-[20px] mb-1 text-white">How does the FundedBits funding process work?</h1>
+        <p class="geist font-medium text-[14px] text-[#7A7A7B]">Traders undergo a two-step evaluation process to qualify for a funded account. Upon passing, they can trade with the firm's capital and keep a percentage of the profits.</p>
+      </div>
+      
+      <div class="mb-5">
+        <h1 class="geist font-semibold text-[20px] mb-1 text-white">What markets can I trade with FundedBits?</h1>
+        <p class="geist font-medium text-[14px] text-[#7A7A7B]">You can trade in forex, crypto, commodities, indices, and more through our advanced trading platforms.</p>
+      </div>
+
+      <div>
+        <h1 class="geist font-semibold text-[20px] mb-1 text-white">How do I get started?</h1>
+        <p class="geist font-medium text-[14px] text-[#7A7A7B]">To get started, simply sign up on our platform, select an evaluation model, and begin trading to meet the required profit targets.</p>
+      </div>
+    </div>
+  </div>
+ 
+
+    <!-- 2 -->
+
+  <div class="faq-card bg-[#0A0B0C7A] p-5 rounded-[8px] w-full lg:w-[890px] mx-auto border border-[#1C1C1D] transition-all duration-500"
+  style="background: linear-gradient(0deg, rgba(10, 11, 12, 0.48), rgba(10, 11, 12, 0.48)), linear-gradient(0deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.08));">
+    <div class="flex justify-between items-start">
+      <div class="flex gap-5">
+        <div class="flex justify-center items-center min-w-[72px] min-h-[72px]">
+          <img src="./images/evaluation.png" alt="" class="w-[72px] h-[72px] object-contain transition-all duration-300">
+        </div>
+        <div>
+          <h1 class="geist font-semibold text-[20px] text-white mb-1">Evaluation & Funding Process</h1>
+          <h1 class="geist font-medium text-[14px] text-[#7A7A7B]">5 Topics</h1>
+        </div>
+      </div>
+      <button class="toggle-btn bg-[#000713] rounded-[10px] h-[32px] mt-5 w-[32px] flex items-center justify-center transition-all">
+        <img src="./images/arrowdown.png" alt="" class="toggle-icon duration-300">
+      </button>
+    </div>
+
+    <div class="faq-content max-h-0 overflow-hidden transition-all duration-700 ease-in-out mt-5 border-t w-full lg:w-[757px] border-[#1C1C1D] pt-4 hidden">
+      <!-- FAQ content goes here -->
+      <div class="mb-5">
+        <h1 class="geist font-semibold text-[20px] mb-1 text-white">What is the Evaluation phase?</h1>
+        <p class="geist font-medium text-[14px] text-[#7A7A7B]">The Evaluation phase is a challenge to assess your trading skills. Traders must meet a profit target within set rules to progress to a funded account.</p>
+      </div>
+      <div class="mb-5">
+        <h1 class="geist font-semibold text-[20px] mb-1 text-white">Is there a minimum number of trading days?</h1>
+        <p class="geist font-medium text-[14px] text-[#7A7A7B]">No, you can complete the challenge at your own pace as long as you meet the profit target within the time limit.</p>
+      </div>
+      
+      <div class="mb-5">
+        <h1 class="geist font-semibold text-[20px] mb-1 text-white">What is the profit target?</h1>
+        <p class="geist font-medium text-[14px] text-[#7A7A7B]">The profit target varies by account type but typically ranges between 8-10%.</p>
+      </div>
+
+      <div class="mb-5">
+        <h1 class="geist font-semibold text-[20px] mb-1 text-white">Can I reset my evaluation if I fail?</h1>
+        <p class="geist font-medium text-[14px] text-[#7A7A7B]">Yes, we offer an account reset option where you can restart the evaluation for a fee.</p>
+      </div>
+
+      <div>
+        <h1 class="geist font-semibold text-[20px] mb-1 text-white">What happens if I breach the rules during evaluation?</h1>
+        <p class="geist font-medium text-[14px] text-[#7A7A7B]">A breach in any rule (e.g., exceeding maximum drawdown) will result in immediate disqualification from the evaluation phase.</p>
+      </div>
+    </div>
+  </div>
+ 
+
+    <!-- 3 -->
+
+  <div class="faq-card bg-[#0A0B0C7A] p-5 rounded-[8px] w-full lg:w-[890px] mx-auto border border-[#1C1C1D] transition-all duration-500"
+  style="background: linear-gradient(0deg, rgba(10, 11, 12, 0.48), rgba(10, 11, 12, 0.48)), linear-gradient(0deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.08));">
+    <div class="flex justify-between items-start">
+      <div class="flex gap-5">
+        <div class="flex justify-center items-center min-w-[72px] min-h-[72px]">
+          <img src="./images/tradingrules.png" alt="" class="w-[72px] h-[72px] object-contain transition-all duration-300">
+        </div>
+        <div>
+          <h1 class="geist font-semibold text-[20px] text-white mb-1">Trading Rules</h1>
+          <h1 class="geist font-medium text-[14px] text-[#7A7A7B]">4 Topics</h1>
+        </div>
+      </div>
+      <button class="toggle-btn bg-[#000713] rounded-[10px] h-[32px] mt-5 w-[32px] flex items-center justify-center transition-all">
+        <img src="./images/arrowdown.png" alt="" class="toggle-icon duration-300">
+      </button>
+    </div>
+
+    <div class="faq-content max-h-0 overflow-hidden transition-all duration-700 ease-in-out mt-5 border-t w-full lg:w-[757px] border-[#1C1C1D] pt-4 hidden">
+      <!-- FAQ content goes here -->
+      <div class="mb-5">
+        <h1 class="geist font-semibold text-[20px] mb-1 text-white">What is the maximum daily drawdown allowed?</h1>
+        <p class="geist font-medium text-[14px] text-[#7A7A7B]">The maximum daily drawdown is 5%, which must be adhered to at all times.</p>
+      </div>
+      <div class="mb-5">
+        <h1 class="geist font-semibold text-[20px] mb-1 text-white">Can I trade on news releases?</h1>
+        <p class="geist font-medium text-[14px] text-[#7A7A7B]">Yes, you are allowed to trade during high-impact news releases, but ensure you manage your risk appropriately.</p>
+      </div>
+      
+      <div class="mb-5">
+        <h1 class="geist font-semibold text-[20px] mb-1 text-white">Are there any restrictions on holding trades overnight or over the weekend?</h1>
+        <p class="geist font-medium text-[14px] text-[#7A7A7B]">No, FundedBits does not impose restrictions on holding trades overnight or over weekends.</p>
+      </div>
+
+      <div>
+        <h1 class="geist font-semibold text-[20px] mb-1 text-white">What trading platforms do you support?</h1>
+        <p class="geist font-medium text-[14px] text-[#7A7A7B]">We support Matchtrader and TradingView providing flexibility for all trading styles.</p>
+      </div>
+    </div>
+  </div>
+ 
+
+    <!-- 4 -->
+
+  <div class="faq-card bg-[#0A0B0C7A] p-5 rounded-[8px] w-full lg:w-[890px] mx-auto border border-[#1C1C1D] transition-all duration-500"
+  style="background: linear-gradient(0deg, rgba(10, 11, 12, 0.48), rgba(10, 11, 12, 0.48)), linear-gradient(0deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.08));">
+    <div class="flex justify-between items-start">
+      <div class="flex gap-5">
+        <div class="flex justify-center items-center min-w-[72px] min-h-[72px]">
+          <img src="./images/profitsplit.png" alt="" class="w-[72px] h-[72px] object-contain transition-all duration-300">
+        </div>
+        <div>
+          <h1 class="geist font-semibold text-[20px] text-white mb-1">Profit Split & Withdrawals</h1>
+          <h1 class="geist font-medium text-[14px] text-[#7A7A7B]">3 Topics</h1>
+        </div>
+      </div>
+      <button class="toggle-btn bg-[#000713] rounded-[10px] h-[32px] mt-5 w-[32px] flex items-center justify-center transition-all">
+        <img src="./images/arrowdown.png" alt="" class="toggle-icon duration-300">
+      </button>
+    </div>
+
+    <div class="faq-content max-h-0 overflow-hidden transition-all duration-700 ease-in-out mt-5 border-t w-full lg:w-[757px] border-[#1C1C1D] pt-4 hidden">
+      <!-- FAQ content goes here -->
+      <div class="mb-5">
+        <h1 class="geist font-semibold text-[20px] mb-1 text-white">What profit split can I expect?</h1>
+        <p class="geist font-medium text-[14px] text-[#7A7A7B]">Traders keep 80-90% of the profits earned through trading. Profit splits depend on the account type and evaluation phase.</p>
+      </div>
+      <div class="mb-5">
+        <h1 class="geist font-semibold text-[20px] mb-1 text-white">How do I withdraw my profits?</h1>
+        <p class="geist font-medium text-[14px] text-[#7A7A7B]">Profits can be withdrawn through bank transfers, PayPal, or crypto. Withdrawals are processed quickly and efficiently, typically within 1-2 business days.</p>
+      </div>
+      
+      <div class="">
+        <h1 class="geist font-semibold text-[20px] mb-1 text-white">Are there any withdrawal fees?</h1>
+        <p class="geist font-medium text-[14px] text-[#7A7A7B]">No, FundedBits does not charge any fees for withdrawals.</p>
+      </div>
+
+    </div>
+  </div>
+ 
+
+    <!-- 5 -->
+
+
+ 
+
+  <div class="faq-card bg-[#0A0B0C7A] p-5 rounded-[8px] w-full lg:w-[890px] mx-auto border border-[#1C1C1D] transition-all duration-500"
+  style="background: linear-gradient(0deg, rgba(10, 11, 12, 0.48), rgba(10, 11, 12, 0.48)), linear-gradient(0deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.08));">
+    <div class="flex justify-between items-start">
+      <div class="flex gap-5">
+        <div class="flex justify-center items-center min-w-[72px] min-h-[72px]">
+          <img src="./images/cost.png" alt="" class="w-[72px] h-[72px] object-contain transition-all duration-300">
+        </div>
+        <div>
+          <h1 class="geist font-semibold text-[20px] text-white mb-1">Costs & Fees</h1>
+          <h1 class="geist font-medium text-[14px] text-[#7A7A7B]">2 Topics</h1>
+        </div>
+      </div>
+      <button class="toggle-btn bg-[#000713] rounded-[10px] h-[32px] mt-5 w-[32px] flex items-center justify-center transition-all">
+        <img src="./images/arrowdown.png" alt="" class="toggle-icon duration-300">
+      </button>
+    </div>
+
+    <div class="faq-content max-h-0 overflow-hidden transition-all duration-700 ease-in-out mt-5 border-t w-full lg:w-[757px] border-[#1C1C1D] pt-4 hidden">
+      <!-- FAQ content goes here -->
+     
+      <div class="mb-5">
+        <h1 class="geist font-semibold text-[20px] mb-1 text-white">What is the cost of the evaluation?</h1>
+        <p class="geist font-medium text-[14px] text-[#7A7A7B]">Evaluation fees depend on the account size selected, starting from $100 for smaller accounts.</p>
+      </div>
+      
+      <div>
+        <h1 class="geist font-semibold text-[20px] mb-1 text-white">Is the evaluation fee refundable?</h1>
+        <p class="geist font-medium text-[14px] text-[#7A7A7B]">No, the evaluation fee is non-refundable as it covers administrative and platform costs.</p>
+      </div>
+    </div>
+  </div>
+ 
+
+      <!-- 6 --> 
+
+  <div class="faq-card bg-[#0A0B0C7A] p-5 rounded-[8px] w-full lg:w-[890px] mx-auto border border-[#1C1C1D] transition-all duration-500"
+  style="background: linear-gradient(0deg, rgba(10, 11, 12, 0.48), rgba(10, 11, 12, 0.48)), linear-gradient(0deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.08));">
+    <div class="flex justify-between items-start">
+      <div class="flex gap-5">
+        <div class="flex justify-center items-center min-w-[72px] min-h-[72px]">
+          <img src="./images/account.png" alt="" class="w-[72px] h-[72px] object-contain transition-all duration-300">
+        </div>
+        <div>
+          <h1 class="geist font-semibold text-[20px] text-white mb-1">Account Options</h1>
+          <h1 class="geist font-medium text-[14px] text-[#7A7A7B]">2 Topics</h1>
+        </div>
+      </div>
+      <button class="toggle-btn bg-[#000713] rounded-[10px] h-[32px] mt-5 w-[32px] flex items-center justify-center transition-all">
+        <img src="./images/arrowdown.png" alt="" class="toggle-icon duration-300">
+      </button>
+    </div>
+
+    <div class="faq-content max-h-0 overflow-hidden transition-all duration-700 ease-in-out mt-5 border-t w-full lg:w-[757px] border-[#1C1C1D] pt-4 hidden">
+      <!-- FAQ content goes here -->
+   
+      <div class="mb-5">
+        <h1 class="geist font-semibold text-[20px] mb-1 text-white">What account sizes are available?</h1>
+        <p class="geist font-medium text-[14px] text-[#7A7A7B]">FundedBits offers accounts ranging from $10,000 to $500,000, depending on your evaluation and funding model.</p>
+      </div>
+      
+
+      <div>
+        <h1 class="geist font-semibold text-[20px] mb-1 text-white">Can I trade my own personal funds alongside FundedBits capital?</h1>
+        <p class="geist font-medium text-[14px] text-[#7A7A7B]">Yes, but this must be done through a separate trading account, not through the FundedBits platform.</p>
+      </div>
+    </div>
+  </div>
+ 
+
+
+  
+  <!-- 7 --> 
+
+  <div class="faq-card bg-[#0A0B0C7A] p-5 rounded-[8px] w-full lg:w-[890px] mx-auto border border-[#1C1C1D] transition-all duration-500"
+  style="background: linear-gradient(0deg, rgba(10, 11, 12, 0.48), rgba(10, 11, 12, 0.48)), linear-gradient(0deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.08));">
+    <div class="flex justify-between items-start">
+      <div class="flex gap-5">
+        <div class="flex justify-center items-center min-w-[72px] min-h-[72px]">
+          <img src="./images/partnership.png" alt="" class="w-[72px] h-[72px] object-contain transition-all duration-300">
+        </div>
+        <div>
+          <h1 class="geist font-semibold text-[20px] text-white mb-1">Partnership & Referral Programs</h1>
+          <h1 class="geist font-medium text-[14px] text-[#7A7A7B]">2 Topics</h1>
+        </div>
+      </div>
+      <button class="toggle-btn bg-[#000713] rounded-[10px] h-[32px] mt-5 w-[32px] flex items-center justify-center transition-all">
+        <img src="./images/arrowdown.png" alt="" class="toggle-icon duration-300">
+      </button>
+    </div>
+
+    <div class="faq-content max-h-0 overflow-hidden transition-all duration-700 ease-in-out mt-5 border-t w-full lg:w-[757px] border-[#1C1C1D] pt-4 hidden">
+      <!-- FAQ content goes here -->
+        
+      <div class="mb-5">
+        <h1 class="geist font-semibold text-[20px] mb-1 text-white">Does FundedBits offer an affiliate program?</h1>
+        <p class="geist font-medium text-[14px] text-[#7A7A7B]">Yes, we offer an affiliate program with lucrative commissions and lifetime recurring revenue for referred traders.</p>
+      </div>
+      
+
+      <div>
+        <h1 class="geist font-semibold text-[20px] mb-1 text-white">How can I join the FundedBits affiliate program?</h1>
+        <p class="geist font-medium text-[14px] text-[#7A7A7B]">To join, visit our affiliate program page and follow the registration process. You'll be provided with marketing materials and a unique referral link.</p>
+      </div>
+    </div>
+  </div>
+ 
+
+
+    <!-- 8 -->
+
+  <div class="faq-card bg-[#0A0B0C7A] p-5 rounded-[8px] w-full lg:w-[890px] mx-auto border border-[#1C1C1D] transition-all duration-500"
+  style="background: linear-gradient(0deg, rgba(10, 11, 12, 0.48), rgba(10, 11, 12, 0.48)), linear-gradient(0deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.08));">
+    <div class="flex justify-between items-start">
+      <div class="flex gap-5">
+        <div class="flex justify-center items-center min-w-[72px] min-h-[72px]">
+          <img src="./images/commontrading.png" alt="" class="w-[72px] h-[72px] object-contain transition-all duration-300">
+        </div>
+        <div>
+          <h1 class="geist font-semibold text-[20px] text-white mb-1"></h1>Common Trading Questions
+          <h1 class="geist font-medium text-[14px] text-[#7A7A7B]">2 Topics</h1>
+        </div>
+      </div>
+      <button class="toggle-btn bg-[#000713] rounded-[10px] h-[32px] mt-5 w-[32px] flex items-center justify-center transition-all">
+        <img src="./images/arrowdown.png" alt="" class="toggle-icon duration-300">
+      </button>
+    </div>
+
+    <div class="faq-content max-h-0 overflow-hidden transition-all duration-700 ease-in-out mt-5 border-t w-full lg:w-[757px] border-[#1C1C1D] pt-4 hidden">
+      <!-- FAQ content goes here -->
+      
+      <div class="mb-5">
+        <h1 class="geist font-semibold text-[20px] mb-1 text-white">Can I use expert advisors (EAs) or bots?</h1>
+        <p class="geist font-medium text-[14px] text-[#7A7A7B]">Yes, we allow the use of EAs and other automated trading systems, provided they comply with our risk management rules.</p>
+      </div>
+      
+   
+
+      <div>
+        <h1 class="geist font-semibold text-[20px] mb-1 text-white">Can I trade from multiple devices?</h1>
+        <p class="geist font-medium text-[14px] text-[#7A7A7B]">Yes, our platforms allow you to trade from multiple devices including desktops, tablets, and smartphones.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 9 -->
+
+  
+  <div class="faq-card bg-[#0A0B0C7A] p-5 rounded-[8px] w-full lg:w-[890px] mx-auto border border-[#1C1C1D] transition-all duration-500" 
+  style="background: linear-gradient(0deg, rgba(10, 11, 12, 0.48), rgba(10, 11, 12, 0.48)), linear-gradient(0deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.08));">
+    <div class="flex justify-between items-start">
+      <div class="flex gap-5">
+        <div class="flex justify-center items-center min-w-[72px] min-h-[72px]">
+          <img src="./images/support.png" alt="" class="w-[72px] h-[72px] object-contain transition-all duration-300">
+        </div>
+        <div>
+          <h1 class="geist font-semibold text-[20px] text-white mb-1">Support & Help</h1>
+          <h1 class="geist font-medium text-[14px] text-[#7A7A7B]">2 Topics</h1>
+        </div>
+      </div>
+      <button class="toggle-btn bg-[#000713] rounded-[10px] h-[32px] mt-5 w-[32px] flex items-center justify-center transition-all">
+        <img src="./images/arrowdown.png" alt="" class="toggle-icon duration-300">
+      </button>
+    </div>
+
+    <div class="faq-content max-h-0 overflow-hidden transition-all duration-700 ease-in-out mt-5 border-t w-full lg:w-[757px] border-[#1C1C1D] pt-4 hidden">
+      <!-- FAQ content goes here -->
+    
+      <div class="mb-5">
+        <h1 class="geist font-semibold text-[20px] mb-1 text-white">What support channels are available?</h1>
+        <p class="geist font-medium text-[14px] text-[#7A7A7B]">You can reach us via live chat, email, and phone support. Our team is available 24/7 to assist with any queries.</p>
+      </div>
+      
+    
+      <div>
+        <h1 class="geist font-semibold text-[20px] mb-1 text-white">Does FundedBits offer educational resources?</h1>
+        <p class="geist font-medium text-[14px] text-[#7A7A7B]">Yes, we provide traders with webinars, tutorials, and market analysis to help improve their trading performance.</p>
+      </div>
+    </div>
+  </div>
+ 
+
+  <!--  FAQ CARD END -->
+ </div>
+
+
+<!-- Toggle Script -->
+<script>
+  document.querySelectorAll('.faq-card').forEach(card => {
+    const toggleBtn = card.querySelector('.toggle-btn');
+    const content = card.querySelector('.faq-content');
+    const icon = card.querySelector('.toggle-icon');
+
+    toggleBtn.addEventListener('click', () => {
+      const isOpen = !content.classList.contains('hidden');
+      
+      // Close all cards
+      document.querySelectorAll('.faq-card .faq-content').forEach(el => {
+        el.classList.add('hidden');
+        el.style.maxHeight = null;
+      });
+      document.querySelectorAll('.faq-card .toggle-icon').forEach(el => {
+        el.src = './images/arrowdown.png';
+      });
+
+      // Toggle current card
+      if (!isOpen) {
+        content.classList.remove('hidden');
+        content.style.maxHeight = content.scrollHeight + "px";
+        icon.src = './images/arrowup.png';
+      }
+    });
+  });
+</script>
+
+<!--  -->
+<!--  -->
+<!-- Footer -->
+<!--  -->
+<!--  -->
+<!--  -->
+
+<footer class="px-6 sm:px-10 md:px-[108px] py-[5rem] border-t border-[#7A7A7B59]"
+  style="background: radial-gradient(54.37% 124.75% at 53.04% 84.37%, rgba(76, 111, 192, 0.56) 0%, rgba(4, 34, 94, 0.56) 41.43%, rgba(0, 0, 0, 0.56) 100%);">
+  
+  <div class="flex flex-col lg:flex-row lg:justify-between gap-10">
+    <!-- Logo -->
+    <div class="flex-shrink-0">
+      <a href="./index.html"><img src="./images/navlogo.png" alt="Logo" class="w-[150px]"></a>
+    </div>
+
+    <!-- Useful Links + Legal -->
+    <div class="flex flex-col sm:flex-row gap-10">
+      <div class="space-y-4">
+        <p class="text-[16px] font-medium text-white">Useful Links</p>
+        <ul class="list-none text-[14px] space-y-4 text-[#7A7A7B]">
+          <a href="./affiliate.html"><li class="hover:text-white duration-200 cursor-pointer">Affiliate</li></a>
+          <a href="./faqs.html"><li class="hover:text-white duration-200 cursor-pointer">FAQs</li></a>
+         <a href="./about.html"> <li class="hover:text-white duration-200 cursor-pointer">About Us</li></a>
+          <a href="./blog.html"><li class="hover:text-white duration-200 cursor-pointer">Blog</li></a>
+        </ul>
+      </div>
+
+      <div class="space-y-4">
+        <p class="text-[16px] font-medium text-white">Legal</p>
+        <ul class="list-none text-[14px] space-y-4 text-[#7A7A7B]">
+          <a href="#"><li class="hover:text-white duration-200 cursor-pointer">Terms & Conditions</li></a>
+          <a href="./policy.html"><li class="hover:text-white duration-200 cursor-pointer">Privacy Policy</li></a>
+          <a href=""><li class="hover:text-white duration-200 cursor-pointer">AML Policy</li></a>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Newsletter -->
+    <div class="max-w-xl">
+      <p class="text-[16px] mb-3 font-medium text-white">Subscribe to Newsletter</p>
+      <p class="text-[14px] font-medium text-[#7A7A7B] mb-4">Stay ahead in the trading world! Subscribe for exclusive updates, tips, and funding opportunities.</p>
+
+      <div class="flex flex-col sm:flex-row gap-3">
+        <input type="text" placeholder="e-mail address"
+          class="w-full sm:w-[298px] h-[45px] px-4 py-3 rounded-[8px] border border-[#7A7A7B] text-white placeholder:text-[#7A7A7B] bg-[linear-gradient(0deg,rgba(10,11,12,0.48),rgba(10,11,12,0.48)),linear-gradient(0deg,rgba(255,255,255,0.02),rgba(255,255,255,0.02))]" />
+
+        <button class="px-6 py-2 rounded text-white tracking-wide backdrop-blur-sm transition-all duration-300 border border-transparent"
+          style="border-width: 1px; border-style: solid; border-image-source: linear-gradient(315.99deg, rgba(242, 243, 245, 0.7) 3.89%, rgba(0, 7, 18, 0.7) 94.54%); border-image-slice: 1;">
+          Subscribe
+        </button>
+      </div>
+
+      <!-- Social Icons -->
+      <div class="mt-6 w-[164px] flex justify-between">
+        <img src="./images/smalldiscord.png" alt="">
+        <img src="./images/ig.png" alt="">
+        <img src="./images/x.png" alt="">
+        <img src="./images/youtube.png" alt="">
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom Logo -->
+  <div class="mt-[5rem]">
+    <img src="./images/FUNDEDBITS.png" class="mx-auto" alt="">
+  </div>
+</footer>
+      
+</body>
+</html>

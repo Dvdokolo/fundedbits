@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
   <link href="./src/output.css" rel="stylesheet">
-  <title>home</title>
+  <title>Home</title>
 </head>
 <body class="Geist bg-[#000713] text-[#FFFFFF]">
 
@@ -16,14 +16,14 @@
 <!-- NAV START -->
 <div class="mx-[2rem] flex justify-center mb-[6rem]    ">
   
-  <nav class="fixed z-100  bg-[#FFFFFF0F] border  border-[#7A7A7B70] backdrop-blur-xl rounded-[12px] w-full max-w-[900px] mx-auto mt-5 px-5 py-4 text-[#7A7A7B]">
+  <nav class="fixed z-100  bg-[#FFFFFF0F] border  border-[#7A7A7B70] backdrop-blur-xl rounded-[12px] w-full max-w-[900px] mx-auto  mt-1 lg:mt-5 px-5 py-4 text-[#7A7A7B]">
     <div class="flex justify-between items-center">
       <!-- Hamburger and Logo -->
       <div class="flex items-center gap-4">
         <!-- Hamburger Icon -->
-        <button id="menu-toggle" class="lg:hidden focus:outline-none transition-transform duration-300">
+      <a href="#">  <button id="menu-toggle" class="lg:hidden focus:outline-none transition-transform duration-300">
           <img id="menu-icon" src="images/hamburger.png" alt="Menu" class="w-6 h-6">
-        </button>
+        </button></a>
   
         <!-- Logo -->
         <a href="./index.html"><img src="images/navlogo.png" alt="Logo" class="w-[121px] md:w-auto  h-6"></a>
@@ -44,23 +44,23 @@
           <li class="list-none hover:text-white duration-200 cursor-pointer">Dashboard</li>
         </div>
   
-        <button class="px-6 py-2 rounded text-white tracking-wide backdrop-blur-sm transition-all duration-300 border border-transparent" style="
+      <a href="#">  <button class="px-6 py-2 rounded text-white tracking-wide backdrop-blur-sm transition-all duration-300 border border-transparent" style="
           border-width: 1px;
           border-style: solid;
           border-image-source: linear-gradient(315.99deg, rgba(242, 243, 245, 0.7) 3.89%, rgba(0, 7, 18, 0.7) 94.54%);
           border-image-slice: 1;
         ">
           Get Funded
-        </button>
+        </button></a>
       </div>
-      <button class="block lg:hidden px-3 py-2 mt-2 rounded text-white tracking-wide text-[14px] backdrop-blur-sm transition-all duration-300 border border-transparent" style="
+      <a href="#"><button class="block lg:hidden px-3 py-2 mt-2 rounded text-white tracking-wide text-[14px] backdrop-blur-sm transition-all duration-300 border border-transparent" style="
       border-width: 1px;
       border-style: solid;
       border-image-source: linear-gradient(315.99deg, rgba(242, 243, 245, 0.7) 3.89%, rgba(0, 7, 18, 0.7) 94.54%);
       border-image-slice: 1;
     ">
       Get Funded
-    </button>
+    </button></a>
     </div>
  
 
@@ -118,16 +118,21 @@
 
    <!-- NAV END  -->
 
-<!-- BACKGROUND IMAGE SECTION -->
+<!-- BACKGROUND  SECTION -->
+
+
+
+<!-- 
+DIV FOR LIGHT
 <div class="relative  bg-center bg-no-repeat  py-10" style="
   background-image: url('images/light2.png'); 
   height: 583.84px; 
   opacity: 0.7;
-">
+"></div> -->
 
-  <div class=""></div> <!-- Optional overlay for contrast -->
+ 
 
-  <div class="relative z-10 flex flex-col items-center justify-center gap-6 text-center px-4">
+  <div class="relative z-10 py-10 flex flex-col items-center justify-center gap-6 text-center px-4">
     <!-- Title -->
     <h1 class="geist font-semibold text-[36px] md:text-[60px] leading-[100%] max-w-[754px] text-white">
       Your Go-to Platform For Limitless Trading Growth
@@ -138,17 +143,18 @@
       Get instant capital, trade crypto & FX without limits, and keep more of what you earn.
     </h2>
 <!-- Buttons -->
-<div class="flex gap-[10px] mt-4">
+<div class="md:flex gap-[10px] mt-4">
   <!-- Get Funded Button -->
-  <button 
+  <a href="#"><button 
     class="w-[156px] h-[51px] bg-[#E6E6E6] text-black font-mono px-6 py-[14px] rounded-[4px]  border-[#00000050] border-[1.5px] shadow-[4px_4px_0px_#00000080] transition-all duration-300 hover:bg-white hover:shadow-[0_0_15px_white]"
     style="box-shadow: inset -6px -6px 0px 0px #7A7A7B;"
   >
     Get Funded
-  </button>
-
+  </button></a>
+<br>
+<br>
   <!-- Join Discord Button -->
-  <button 
+ <a href="#"> <button 
     class="h-[51px] px-6 py-[14px] rounded-[4px] text-white font-mono tracking-wide backdrop-blur-sm transition-all duration-300  border-transparent border-[1.5px]"
     style="
       border-image-source: linear-gradient(315.99deg, rgba(242, 243, 245, 0.7) 3.89%, rgba(0, 7, 18, 0.7) 94.54%);
@@ -156,20 +162,50 @@
     "
   >
     Join Discord
-  </button>
+  </button></a>
 </div>
 
 
 </div>
-</div>
+
+
+
+<!-- MP4 -->
+
+<video
+  id="lazyVideo"
+  class="w-full hidden"
+  autoplay
+  loop
+  muted
+  playsinline
+  preload="none"
+>
+  <source src="./mp4/Hero Section_v3.mp4" type="video/mp4" />
+  Your browser does not support the video tag.
+</video>
+
+<script>
+  window.onload = function () {
+    const video = document.getElementById('lazyVideo');
+    video.classList.remove('hidden'); // Reveal with Tailwind
+    video.load();                     // Load it
+    video.play();                     // Play it
+  };
+</script>
+
+
+
+
+
 <br>
 <br>
 
 <img src="./images/tradingline.png" class="w-full bg-cover" alt="">
 
 
-<div class="mt-[120px]">
-  <h1 class="geist font-semibold text-[40px] leading-[100%] max-w-[754px] text-center mx-auto text-white">
+<div class="mt-[2rem] lg:mt-[120px]">
+  <h1 class="geist px-2 font-semibold text-[30px] md:text-[40px] leading-[100%] max-w-[754px] text-center mx-auto text-white">
     Take The challenge, Earn Your Funding
   </h1>
 <br>
@@ -266,30 +302,26 @@
       Add-Ons
     </p>
     <div class="gap-3 flex">
-      <button class="styled-button text-[10px] lg:text-[14px] my-auto justify-center  items-center flex h-[2.5rem]">90/10 Share of Gains</button>
-      <button class="styled-button text-[14px] my-auto justify-center  items-center flex h-[2.5rem]">Bi Weekly Payouts </button>
+    <a href="#">  <button class="styled-button text-[10px] lg:text-[14px] my-auto justify-center  items-center flex h-[2.5rem]">90/10 Share of Gains</button></a>
+    <a href="#">  <button class="styled-button text-[14px] my-auto justify-center  items-center flex h-[2.5rem]">Bi Weekly Payouts </button></a>
     </div>
    
 
   </div>
   <div>
-    <button 
+   <a href="#"> <button 
     class=" h-[51px] w-full md:w-[224px] bg-[#E6E6E6] text-black font-mono px-6 py-[14px] rounded-[4px]  border-[#00000050] border-[1.5px] shadow-[4px_4px_0px_#00000080] transition-all duration-300 hover:bg-white hover:shadow-[0_0_15px_white]"
     style="box-shadow: inset -6px -6px 0px 0px #7A7A7B;"
   >
   Get Funded - $349
-  </button>
+  </button></a>
   </div>
 </div>
 
-<br>
-<br>
-<br>
-<br>
 
 
 
-<div>
+<div class="mt-[2rem] lg:mt-[4rem]">
   <h1 class="geist font-medium text-[14px] leading-[100%] max-w-[754px] text-center mb-3 mx-auto text-[#7A7A7B]">
     Trading Platforms
   </h1>
@@ -353,7 +385,7 @@
 
 
 
-
+<!-- EVALUATION PROCESS  -->
 <div>
  
 
@@ -375,7 +407,7 @@
   <h1 class="geist font-bold text-[18px] mb-3 leading-[100%] text-white">Noob Arena</h1>
   <h1 class="geist font-medium text-[14px] leading-[100%] text-[#7A7A7B] md:w-[356px]">Prove your trading skills in a low-pressure 
     environment. Hit an 8% profit target—no rush, no rigid deadlines, just you mastering the markets.</h1>
-    <img src="./images/5%profit.png" alt="">
+    <img src="./images/8-profit.png" alt="">
 </div>
 
 
@@ -385,7 +417,7 @@
   <h1 class="geist font-bold text-[18px] mb-3 leading-[100%] text-white">OGs Arena </h1>
   <h1 class="geist font-medium text-[14px] leading-[100%] text-[#7A7A7B] md:w-[356px]">Time to level up. Stay consistent, 
     navigate market swings, and hit a 5% profit target to prove you're ready for the big leagues.</h1>
-    <img src="./images/8%profit.png" alt="">
+    <img src="./images/5-profit.png" alt="">
 </div>
 
 
@@ -396,11 +428,62 @@
   <h1 class="geist font-bold text-[18px] mb-3 leading-[100%] text-white">Degens Arena</h1>
   <h1 class="geist font-medium text-[14px] leading-[100%] text-[#7A7A7B] md:w-[356px]">You did it! Trade with our capital, 
     keep 90% of the profits, and enjoy the freedom to execute your strategies without limitations.</h1>
-    <img src="./images/8%profit.png" alt="">
+    <img src="./images/90-profit.png" alt="">
 </div>
 
 
 </div>
+
+
+
+
+
+<!--  -->
+
+<div class="lg:w-[931px] flex flex-col justify-between gap-[44px] rounded-[24px] border border-[#1C1C1D] bg-[#0F1011] px-[32px] mx-auto mt-[5rem] py-[24px]">
+
+  <div class="flex lg:block justify-evenly">
+    <img src="./images/flexiblepayout.png" class="h-[46px] w-[46px]" alt="">
+    <h1 class="geist font-semibold text-[40px] text-center lg:text-left leading-[100%]  my-4  mx-auto text-white">
+      Flexible Payouts with Rise
+    </h1>
+  </div>
+
+  <div class="flex flex-wrap space-y-10 justify-between">
+    <!-- 1 -->
+<div class="w-[250px] mx-auto">
+  <img src="./images/banktransfer.png" alt="">
+  <h1 class="geist font-bold text-[18px] my-3 leading-[100%] text-white">Bank Transfers</h1>
+  <h1 class="geist font-medium text-[14px] leading-[100%] text-[#7A7A7B]">Direct deposits to your bank account, simple and reliable.</h1>
+</div>
+
+
+<!-- 2 -->
+<div class="w-[250px] mx-auto">
+  <img src="./images/criptowallet.png" alt="">
+  <h1 class="geist font-bold text-[18px] my-3 leading-[100%] text-white">Crypto Wallets</h1>
+  <h1 class="geist font-medium text-[14px] leading-[100%] text-[#7A7A7B]">Choose popular tokens like BTC or ETH for quick, global access.</h1>
+</div>
+
+<!-- 3 -->
+<div class="w-[250px] mx-auto">
+  <img src="./images/localcurrencysupport.png" alt="">
+  <h1 class="geist font-bold text-[18px] my-3 leading-[100%] text-white">Local Currency Support</h1>
+  <h1 class="geist font-medium text-[14px] leading-[100%] text-[#7A7A7B]">For select regions, withdraw in your local currency for added ease.</h1>
+</div>
+
+  </div>
+
+</div>
+
+
+
+
+
+
+
+
+
 
 
 <!-- BENEFITS AVALABLE  -->
@@ -410,7 +493,7 @@
     Why FundedBits
   </h1>
 
-  <h1 class="geist font-semibold text-[40px] leading-[100%] mb-10 text-center mx-auto text-white">
+  <h1 class="geist font-semibold text-[30px] lg:text-[40px] leading-[100%] px-2 mb-5 text-center mx-auto text-white">
     The Benefits You want are available here
   </h1>
 </div>
@@ -420,9 +503,11 @@
     <img src="./images/unlock capital.png" class="w-[332px] h-[195px]" alt="">
     <img src="./images/digitalcurrency.png" class="w-[332px] h-[195px]" alt="">
     <img src="./images/Frame 1410103994.png" class="w-[332px] h-[195px]" alt="">
+    <img src="./images/Frame 1410103994.png" class="w-[332px] h-[195px]" alt="">
     <!-- Duplicate images for seamless loop -->
     <img src="./images/unlock capital.png" class="w-[332px] h-[195px]" alt="">
     <img src="./images/digitalcurrency.png" class="w-[332px] h-[195px]" alt="">
+    <img src="./images/Frame 1410103994.png" class="w-[332px] h-[195px]" alt="">
     <img src="./images/Frame 1410103994.png" class="w-[332px] h-[195px]" alt="">
   </div>
 </div>
@@ -453,7 +538,7 @@
 <!--  -->
 
 
-<div class="p-5">
+<div class="p-5 mb-[5rem]">
   <div class=" md:w-[596px] h-auto md:h-[60px] justify-evenly md:flex items-center mx-auto mb-3 bg-[#040A14C7] mt-[3.5rem] border-[1px] border-[#1C1C1D] gap-[10px] px-5 py-10 text-[16px] text-[#7A7A7B] rounded-[9px] overflow-hidden relative"
   style="background: radial-gradient(64.79% 132.5% at 50% 160.83%, rgba(76, 111, 192, 0.6) 0%, rgba(4, 34, 94, 0.6) 59.01%, rgba(0, 0, 0, 0.6) 100%);">
  <div class="absolute inset-0 rounded-[9px] border-[1.2px] border-transparent pointer-events-none" style="
@@ -465,12 +550,58 @@
  </h1>
 
 <div class="flex justify-center">
-<button class="border-b p-3 cursor-pointer hover:border-b-2 hover:scale-105 duration-300">
+<a href="#"><button class="border-b p-3 cursor-pointer hover:border-b-2 hover:scale-105 duration-300">
  Get Funded
-</button>
+</button></a>
 </div>
 </div>
 </div>
+
+
+
+
+
+<!--  -->
+
+
+
+<div class="mt-[5rem]">
+  
+  <h1 class="geist font-semibold text-[30px] lg:text-[40px] leading-[100%] px-2 mb-5 text-center mx-auto text-white">
+    Celebrate Every Win
+  </h1>
+  <h1 class="geist font-medium text-[14px] leading-[100%] max-w-[754px] text-center mb-3 mx-auto text-[#7A7A7B]">
+    and unlock access to a funded account
+  </h1>
+
+  
+</div>
+
+<br>  
+
+
+
+
+<div class="overflow-hidden relative">
+  <div class="marquee flex items-center gap-10 w-max">
+    <img src="./images/certificate-of-challange-complition.png" class="" alt="">
+    <img src="./images/certificate-of-challange-complition.png" class="" alt="">
+    <img src="./images/certificate-of-challange-complition.png" class="" alt="">
+    <img src="./images/certificate-of-challange-complition.png" class="" alt="">
+    <img src="./images/certificate-of-challange-complition.png" class="" alt="">
+    <!-- Duplicate images for seamless loop -->
+    <img src="./images/certificate-of-challange-complition.png" class="" alt="">
+    <img src="./images/certificate-of-challange-complition.png" class="" alt="">
+    <img src="./images/certificate-of-challange-complition.png" class="" alt="">
+    <img src="./images/certificate-of-challange-complition.png" class="" alt="">
+    <img src="./images/certificate-of-challange-complition.png" class="" alt="">
+  </div>
+</div>
+
+
+
+
+
 
 
 
@@ -480,7 +611,7 @@
     Dashboard
   </h1>
 
-  <h1 class="geist font-semibold text-[40px] leading-[100%] mb-5 text-center mx-auto text-white">
+  <h1 class="geist font-semibold text-[30px] lg:text-[40px] leading-[100%] px-2 mb-5 text-center mx-auto text-white">
     Your Trading Hub at a Glance
   </h1>
 </div>
@@ -562,18 +693,18 @@
         <input type="text" placeholder="e-mail address"
           class="w-full sm:w-[298px] h-[45px] px-4 py-3 rounded-[8px] border border-[#7A7A7B] text-white placeholder:text-[#7A7A7B] bg-[linear-gradient(0deg,rgba(10,11,12,0.48),rgba(10,11,12,0.48)),linear-gradient(0deg,rgba(255,255,255,0.02),rgba(255,255,255,0.02))]" />
 
-        <button class="px-6 py-2 rounded text-white tracking-wide backdrop-blur-sm transition-all duration-300 border border-transparent"
+     <a href="#"> <button class="px-6 py-2 rounded text-white tracking-wide backdrop-blur-sm transition-all duration-300 border border-transparent"
           style="border-width: 1px; border-style: solid; border-image-source: linear-gradient(315.99deg, rgba(242, 243, 245, 0.7) 3.89%, rgba(0, 7, 18, 0.7) 94.54%); border-image-slice: 1;">
           Subscribe
-        </button>
+        </button></a>
       </div>
 
       <!-- Social Icons -->
-      <div class="mt-6 w-[164px] flex justify-between">
-        <img src="./images/smalldiscord.png" alt="">
-        <img src="./images/ig.png" alt="">
-        <img src="./images/x.png" alt="">
-        <img src="./images/youtube.png" alt="">
+  <div class="mt-6 w-[164px] flex justify-between">
+        <a href="#"><img src="./images/smalldiscord.png" alt=""></a>
+        <a href="#"><img src="./images/ig.png" alt=""></a>
+        <a href="#"><img src="./images/x.png" alt=""></a>
+        <a href="#"><img src="./images/youtube.png" alt=""></a>
       </div>
     </div>
   </div>

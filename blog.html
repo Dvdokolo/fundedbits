@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link href="./src/output.css" rel="stylesheet">
-    <title>blog</title>
+    <title>Blog</title>
 </head>
 <body class="Geist bg-[#000713] text-[#FFFFFF]">
     
@@ -23,14 +23,14 @@
  <!-- NAV START -->
 <div class="mx-[2rem] flex justify-center mb-[6rem]    ">
   
- <nav class="fixed z-100  bg-[#FFFFFF0F] border  border-[#7A7A7B70] backdrop-blur-xl rounded-[12px] w-full max-w-[900px] mx-auto mt-5 px-5 py-4 text-[#7A7A7B]">
+ <nav class="fixed z-100  bg-[#FFFFFF0F] border  border-[#7A7A7B70] backdrop-blur-xl rounded-[12px] w-full max-w-[900px] mx-auto mt-1 lg:mt-5 px-5 py-4 text-[#7A7A7B]">
     <div class="flex justify-between items-center">
       <!-- Hamburger and Logo -->
       <div class="flex items-center gap-4">
         <!-- Hamburger Icon -->
-        <button id="menu-toggle" class="lg:hidden focus:outline-none transition-transform duration-300">
+       <a href="#"> <button id="menu-toggle" class="lg:hidden focus:outline-none transition-transform duration-300">
           <img id="menu-icon" src="images/hamburger.png" alt="Menu" class="w-6 h-6">
-        </button>
+        </button></a>
   
         <!-- Logo -->
         <a href="./index.html"><img src="images/navlogo.png" alt="Logo" class="w-[121px] md:w-auto  h-6"></a>
@@ -51,23 +51,23 @@
           <li class="list-none hover:text-white duration-200 cursor-pointer">Dashboard</li>
         </div>
   
-        <button class="px-6 py-2 rounded text-white tracking-wide backdrop-blur-sm transition-all duration-300 border border-transparent" style="
+       <a href="#"> <button class="px-6 py-2 rounded text-white tracking-wide backdrop-blur-sm transition-all duration-300 border border-transparent" style="
           border-width: 1px;
           border-style: solid;
           border-image-source: linear-gradient(315.99deg, rgba(242, 243, 245, 0.7) 3.89%, rgba(0, 7, 18, 0.7) 94.54%);
           border-image-slice: 1;
         ">
           Get Funded
-        </button>
+        </button></a>
       </div>
-      <button class="block lg:hidden px-3 py-2 mt-2 rounded text-white tracking-wide text-[14px] backdrop-blur-sm transition-all duration-300 border border-transparent" style="
+     <a href="#"> <button class="block lg:hidden px-3 py-2 mt-2 rounded text-white tracking-wide text-[14px] backdrop-blur-sm transition-all duration-300 border border-transparent" style="
       border-width: 1px;
       border-style: solid;
       border-image-source: linear-gradient(315.99deg, rgba(242, 243, 245, 0.7) 3.89%, rgba(0, 7, 18, 0.7) 94.54%);
       border-image-slice: 1;
     ">
       Get Funded
-    </button>
+    </button></a>
     </div>
  
 
@@ -128,9 +128,10 @@
 
 
         <div class="p-6 flex justify-center pt-[4rem] md:pt-[7rem]">
-          <h1 class="geist  text-center font-semibold text0[40px] lg:text-[60px] leading-[100%] mx-auto text-[#FFFFFF]">
+          <h1 class="geist  text-center font-semibold text-[40px] lg:text-[60px] leading-[100%] mx-auto text-[#FFFFFF]">
             Blog
           </h1>
+
 
         </div>
 <div class="flex justify-center">
@@ -159,20 +160,20 @@
           </div>
       
           <div class="flex gap-3 mt-4">
-            <button class=" text-[12px] px-3 py-1.5 border-2 border-[#1C1C1D] rounded-[4px] text-[#7A7A7B]">
+           <a href="#"> <button class=" text-[12px] px-3 py-1.5 border-2 border-[#1C1C1D] rounded-[4px] text-[#7A7A7B]">
               Prop Trading
-            </button>
-            <button class="text-[12px] px-3 py-1.5 border-2 border-[#1C1C1D] rounded-[4px] text-[#7A7A7B]">
+            </button></a>
+           <a href="#"></a> <button class="text-[12px] px-3 py-1.5 border-2 border-[#1C1C1D] rounded-[4px] text-[#7A7A7B]">
                 Funding Models
-            </button>
-            <button class=" text-[12px] px-3 py-1.5 border-2 border-[#1C1C1D] rounded-[4px] text-[#7A7A7B]">
+            </button></a>
+            <a href="#"><button class=" text-[12px] px-3 py-1.5 border-2 border-[#1C1C1D] rounded-[4px] text-[#7A7A7B]">
                 Trading Opportunities
-            </button>
+            </button></a>
           </div>
         </div>
       </div>
       
-<div class="lg:w-[1160px] mx-auto">
+<div class="lg:w-[1300px] mx-auto">
     
 
     <h1 class="geist font-semibold text-[32px] mx-4 lg:mx-0 text-white mb-1">
@@ -190,122 +191,140 @@
       
         <!-- Search bar inside nav -->
         <li class="relative w-[230px] min-w-[230px] h-[42px] rounded-full overflow-hidden flex-shrink-0">
-          <img src="./images/search-icon.png" alt="search" class="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 pointer-events-none" />
+          <img src="./images/search-icon.png" alt="search"
+               class="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 pointer-events-none" />
           <input
             type="text"
             placeholder="Search posts"
-            class="w-full h-full pl-12 pr-4 py-[20px] text-white text-[14px] placeholder-white border rounded-full"
+            class="w-full h-full pl-12 pr-4 text-white text-[14px] placeholder-white rounded-full"
             style="
               background: linear-gradient(0deg, rgba(10, 11, 12, 0.48), rgba(10, 11, 12, 0.48)),
                           linear-gradient(0deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.06));
+              border: 1px solid transparent;
+              border-radius: 9999px;
               border-image: linear-gradient(218.4deg, #525C71 0%, #000712 70.84%) 1;
-              border-radius: 44px;
             "
           />
         </li>
+        
       </ul>
 
 <div class="flex flex-wrap justify-between p-5 space-y-15 mx-auto">
 
     <!-- 1 -->
+    <a href="./blog-individual.html " class=" w-[344px] mx-auto ">
+      <div >
+      <img src="./images/blank.png" alt="">
+      <div>
+          <h1 class="geist font-medium text-[14px] text-[#7A7A7B] mt-3">15 September, 2024 | 2 min read</h1>
+          <h1 class="geist font-semibold text-[18px] text-white mb-1">
+              New Prop Trading Firm Disrupts the Market with Revolutionary Funding Model
+          </h1>
+          <h1 class="geist font-normal text-[14px] text-[#7A7A7B]">
+              Discover how this new firm is changing the game with innovative funding models that cater to both no..
+          </h1>
+        </div>
+    </div>
+  </a>
+
+      
+    <!-- 1 -->
     
-    <div class=" w-[344px] mx-auto ">
-        <img src="./images/blank.png" alt="">
-        <div>
-            <h1 class="geist font-medium text-[14px] text-[#7A7A7B] mt-3">15 September, 2024 | 2 min read</h1>
-            <h1 class="geist font-semibold text-[18px] text-white mb-1">
-                New Prop Trading Firm Disrupts the Market with Revolutionary Funding Model
-            </h1>
-            <h1 class="geist font-normal text-[14px] text-[#7A7A7B]">
-                Discover how this new firm is changing the game with innovative funding models that cater to both no..
-            </h1>
-          </div>
-      </div>
+      <a href="./blog-individual.html " class=" w-[344px] mx-auto ">
+      <div >
+      <img src="./images/blank.png" alt="">
+      <div>
+          <h1 class="geist font-medium text-[14px] text-[#7A7A7B] mt-3">15 September, 2024 | 2 min read</h1>
+          <h1 class="geist font-semibold text-[18px] text-white mb-1">
+              New Prop Trading Firm Disrupts the Market with Revolutionary Funding Model
+          </h1>
+          <h1 class="geist font-normal text-[14px] text-[#7A7A7B]">
+              Discover how this new firm is changing the game with innovative funding models that cater to both no..
+          </h1>
+        </div>
+    </div>
+  </a>
+
 
 
       
     <!-- 1 -->
     
-    <div class=" w-[344px] mx-auto ">
-        <img src="./images/blank.png" alt="">
-        <div>
-            <h1 class="geist font-medium text-[14px] text-[#7A7A7B] mt-3">15 September, 2024 | 2 min read</h1>
-            <h1 class="geist font-semibold text-[18px] text-white mb-1">
-                New Prop Trading Firm Disrupts the Market with Revolutionary Funding Model
-            </h1>
-            <h1 class="geist font-normal text-[14px] text-[#7A7A7B]">
-                Discover how this new firm is changing the game with innovative funding models that cater to both no..
-            </h1>
-          </div>
-      </div>
+      <a href="./blog-individual.html " class=" w-[344px] mx-auto ">
+      <div >
+      <img src="./images/blank.png" alt="">
+      <div>
+          <h1 class="geist font-medium text-[14px] text-[#7A7A7B] mt-3">15 September, 2024 | 2 min read</h1>
+          <h1 class="geist font-semibold text-[18px] text-white mb-1">
+              New Prop Trading Firm Disrupts the Market with Revolutionary Funding Model
+          </h1>
+          <h1 class="geist font-normal text-[14px] text-[#7A7A7B]">
+              Discover how this new firm is changing the game with innovative funding models that cater to both no..
+          </h1>
+        </div>
+    </div>
+  </a>
 
-
-      
-    <!-- 1 -->
-    
-    <div class=" w-[344px] mx-auto ">
-        <img src="./images/blank.png" alt="">
-        <div>
-            <h1 class="geist font-medium text-[14px] text-[#7A7A7B] mt-3">15 September, 2024 | 2 min read</h1>
-            <h1 class="geist font-semibold text-[18px] text-white mb-1">
-                New Prop Trading Firm Disrupts the Market with Revolutionary Funding Model
-            </h1>
-            <h1 class="geist font-normal text-[14px] text-[#7A7A7B]">
-                Discover how this new firm is changing the game with innovative funding models that cater to both no..
-            </h1>
-          </div>
-      </div>
 
 
       
     <!-- 1 -->
     
-    <div class=" w-[344px] mx-auto ">
-        <img src="./images/blank.png" alt="">
-        <div>
-            <h1 class="geist font-medium text-[14px] text-[#7A7A7B] mt-3">15 September, 2024 | 2 min read</h1>
-            <h1 class="geist font-semibold text-[18px] text-white mb-1">
-                New Prop Trading Firm Disrupts the Market with Revolutionary Funding Model
-            </h1>
-            <h1 class="geist font-normal text-[14px] text-[#7A7A7B]">
-                Discover how this new firm is changing the game with innovative funding models that cater to both no..
-            </h1>
-          </div>
-      </div>
+      <a href="./blog-individual.html " class=" w-[344px] mx-auto ">
+      <div >
+      <img src="./images/blank.png" alt="">
+      <div>
+          <h1 class="geist font-medium text-[14px] text-[#7A7A7B] mt-3">15 September, 2024 | 2 min read</h1>
+          <h1 class="geist font-semibold text-[18px] text-white mb-1">
+              New Prop Trading Firm Disrupts the Market with Revolutionary Funding Model
+          </h1>
+          <h1 class="geist font-normal text-[14px] text-[#7A7A7B]">
+              Discover how this new firm is changing the game with innovative funding models that cater to both no..
+          </h1>
+        </div>
+    </div>
+  </a>
 
-
-      
-    <!-- 1 -->
-    
-    <div class=" w-[344px] mx-auto ">
-        <img src="./images/blank.png" alt="">
-        <div>
-            <h1 class="geist font-medium text-[14px] text-[#7A7A7B] mt-3">15 September, 2024 | 2 min read</h1>
-            <h1 class="geist font-semibold text-[18px] text-white mb-1">
-                New Prop Trading Firm Disrupts the Market with Revolutionary Funding Model
-            </h1>
-            <h1 class="geist font-normal text-[14px] text-[#7A7A7B]">
-                Discover how this new firm is changing the game with innovative funding models that cater to both no..
-            </h1>
-          </div>
-      </div>
 
 
       
     <!-- 1 -->
     
-    <div class=" w-[344px] mx-auto ">
-        <img src="./images/blank.png" alt="">
-        <div>
-            <h1 class="geist font-medium text-[14px] text-[#7A7A7B] mt-3">15 September, 2024 | 2 min read</h1>
-            <h1 class="geist font-semibold text-[18px] text-white mb-1">
-                New Prop Trading Firm Disrupts the Market with Revolutionary Funding Model
-            </h1>
-            <h1 class="geist font-normal text-[14px] text-[#7A7A7B]">
-                Discover how this new firm is changing the game with innovative funding models that cater to both no..
-            </h1>
-          </div>
-      </div>
+      <a href="./blog-individual.html " class=" w-[344px] mx-auto ">
+      <div >
+      <img src="./images/blank.png" alt="">
+      <div>
+          <h1 class="geist font-medium text-[14px] text-[#7A7A7B] mt-3">15 September, 2024 | 2 min read</h1>
+          <h1 class="geist font-semibold text-[18px] text-white mb-1">
+              New Prop Trading Firm Disrupts the Market with Revolutionary Funding Model
+          </h1>
+          <h1 class="geist font-normal text-[14px] text-[#7A7A7B]">
+              Discover how this new firm is changing the game with innovative funding models that cater to both no..
+          </h1>
+        </div>
+    </div>
+  </a>
+
+
+
+      
+    <!-- 1 -->
+    
+      <a href="./blog-individual.html " class=" w-[344px] mx-auto ">
+      <div >
+      <img src="./images/blank.png" alt="">
+      <div>
+          <h1 class="geist font-medium text-[14px] text-[#7A7A7B] mt-3">15 September, 2024 | 2 min read</h1>
+          <h1 class="geist font-semibold text-[18px] text-white mb-1">
+              New Prop Trading Firm Disrupts the Market with Revolutionary Funding Model
+          </h1>
+          <h1 class="geist font-normal text-[14px] text-[#7A7A7B]">
+              Discover how this new firm is changing the game with innovative funding models that cater to both no..
+          </h1>
+        </div>
+    </div>
+  </a>
+
 
 
 
@@ -367,18 +386,18 @@
         <input type="text" placeholder="e-mail address"
           class="w-full sm:w-[298px] h-[45px] px-4 py-3 rounded-[8px] border border-[#7A7A7B] text-white placeholder:text-[#7A7A7B] bg-[linear-gradient(0deg,rgba(10,11,12,0.48),rgba(10,11,12,0.48)),linear-gradient(0deg,rgba(255,255,255,0.02),rgba(255,255,255,0.02))]" />
 
-        <button class="px-6 py-2 rounded text-white tracking-wide backdrop-blur-sm transition-all duration-300 border border-transparent"
+       <a href="#"> <button class="px-6 py-2 rounded text-white tracking-wide backdrop-blur-sm transition-all duration-300 border border-transparent"
           style="border-width: 1px; border-style: solid; border-image-source: linear-gradient(315.99deg, rgba(242, 243, 245, 0.7) 3.89%, rgba(0, 7, 18, 0.7) 94.54%); border-image-slice: 1;">
           Subscribe
-        </button>
+        </button></a>
       </div>
 
       <!-- Social Icons -->
-      <div class="mt-6 w-[164px] flex justify-between">
-        <img src="./images/smalldiscord.png" alt="">
-        <img src="./images/ig.png" alt="">
-        <img src="./images/x.png" alt="">
-        <img src="./images/youtube.png" alt="">
+  <div class="mt-6 w-[164px] flex justify-between">
+        <a href="#"><img src="./images/smalldiscord.png" alt=""></a>
+        <a href="#"><img src="./images/ig.png" alt=""></a>
+        <a href="#"><img src="./images/x.png" alt=""></a>
+        <a href="#"><img src="./images/youtube.png" alt=""></a>
       </div>
     </div>
   </div>

@@ -334,3 +334,11 @@
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;     /* Firefox */
 }
+
+button {
+  cursor: pointer;
+}
+
+a{
+  cursor: pointer;
+}

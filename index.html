@@ -17,7 +17,7 @@
 
 
 <!-- NAV START -->
-<div class="mx-[2rem] flex justify-center lg:mb-[6rem]    ">
+<div class="mx-[2rem] flex justify-center     ">
   
   <nav class="fixed flex justify-between lg:block z-100  bg-[#FFFFFF0F] border  border-[#7A7A7B70] backdrop-blur-xl rounded-[12px] w-full max-w-[900px] mx-auto  mt-1 lg:mt-5 px-5 py-4 text-[#7A7A7B]">
     <div class="flex justify-between ">
@@ -184,12 +184,10 @@ DIV FOR LIGHT
 </div>
 
 
-
 <!-- MP4 -->
-
 <video
   id="lazyVideo"
-  class="w-full lg:w-[862px] lg:h-[332px] mx-auto hidden"
+  class="w-full lg:w-[862px] lg:h-[332px] mx-auto hidden pointer-events-none"
   autoplay
   loop
   muted
@@ -203,13 +201,19 @@ DIV FOR LIGHT
 <script>
   window.onload = function () {
     const video = document.getElementById('lazyVideo');
-    video.classList.remove('hidden'); // Reveal with Tailwind
-    video.load();                     // Load it
+    video.classList.remove('hidden'); // Reveal
+    video.load();                     // Load video
     video.play();                     // Play it
+
+
+
+    // Watchdog: Re-play if paused
+    setInterval(() => {
+      if (video.paused) video.play();
+    }, 1000);
+
   };
 </script>
-
-
 
 
 

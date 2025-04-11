@@ -146,9 +146,9 @@ DIV FOR LIGHT
 
   <div class="relative z-10 pt-10 flex flex-col items-center justify-center gap-6 text-center px-4">
     <!-- Title -->
-     <br>
-     <br>
-    <br>
+       <div class="m-[2rem]">
+
+     </div>
     <h1 class="geist font-semibold text-[36px] md:text-[60px]  leading-[100%] max-w-[754px] text-white">
       Your Go-to Platform For Limitless Trading Growth
     </h1>
@@ -524,7 +524,7 @@ DIV FOR LIGHT
 </div>
 
 <div class="overflow-hidden relative">
-  <div class="marquee flex items-center gap-10 w-max">
+  <div class="marquee flex items-center   gap-10 w-max">
     <img src="./images/unlock capital.png" class="w-[332px] h-[195px]" alt="">
     <img src="./images/digitalcurrency.png" class="w-[332px] h-[195px]" alt="">
     <img src="./images/Frame 1410103994.png" class="w-[332px] h-[195px]" alt="">
@@ -547,16 +547,18 @@ DIV FOR LIGHT
       transform: translateX(-50%);
     }
   }
-  
+
   .marquee {
-    animation: scrollMarquee 20s linear infinite;
+    animation: scrollMarquee 25s linear infinite;
     will-change: transform;
   }
-  
-  .marquee:hover {
-    animation-duration: 40s; /* Slows to 0.5x on hover */
+
+  .overflow-hidden:hover .marquee {
+    animation: scrollMarquee 25s linear infinite; /* slow down on hover */
+    will-change: transform;
   }
-  </style>
+</style>
+
   
 
 
@@ -813,7 +815,7 @@ DIV FOR LIGHT
       <h1 class="geist font-medium text-[14px] leading-[100%] max-w-[754px] my-auto  text-white">
         Join the Community
       </h1>
-      <img src="./images/join-community-arrow.png" class="my-auto" alt="">
+      <a href="#"><img src="./images/join-community-arrow.png" class="my-auto cursor-pointer" alt=""></a>
      </div>
 
      </div>

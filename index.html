@@ -185,6 +185,7 @@ DIV FOR LIGHT
 
 
 <!-- MP4 -->
+ 
 <video
   id="lazyVideo"
   class="w-full lg:w-[862px] lg:h-[332px] mx-auto hidden pointer-events-none"
@@ -201,19 +202,24 @@ DIV FOR LIGHT
 <script>
   window.onload = function () {
     const video = document.getElementById('lazyVideo');
-    video.classList.remove('hidden'); // Reveal
-    video.load();                     // Load video
-    video.play();                     // Play it
+    video.classList.remove('hidden');
+    video.load();
 
+    // Try to play programmatically after load
+    video.play().catch((error) => {
+      console.warn('Autoplay blocked:', error);
+      // fallback if needed (optional)
+    });
 
-
-    // Watchdog: Re-play if paused
+    // Force video to resume if paused (watchdog)
     setInterval(() => {
-      if (video.paused) video.play();
-    }, 1000);
-
+      if (video.paused) {
+        video.play().catch(() => {});
+      }
+    }, 2000);
   };
 </script>
+
 
 
 

@@ -12,19 +12,19 @@
 <body class="Geist bg-[#000713] text-[#FFFFFF]">
 
 <!-- NAV START -->
-<div class="mx-[2rem] flex justify-center ">
+<div class="flex fixed w-full justify-center z-100   ">
   
-  <nav class="fixed flex justify-between lg:block z-100  bg-[#FFFFFF0F] border  border-[#7A7A7B70] backdrop-blur-xl rounded-[12px] w-full max-w-[900px] mx-auto  mt-1 lg:mt-5 px-5 py-4 text-[#7A7A7B]">
+  <nav class=" flex justify-between mx-[0.5rem] lg:block   bg-[#FFFFFF0F] border  border-[#7A7A7B70] backdrop-blur-xl rounded-[12px] w-full max-w-[900px]   mt-1 lg:mt-5 px-5 py-4 text-[#7A7A7B]">
     <div class="flex justify-between ">
       <!-- Hamburger and Logo -->
-      <div class="flex items-center gap-4">
+      <div class="flex items-center gap-2">
         <!-- Hamburger Icon -->
       <a href="#">  <button id="menu-toggle" class="lg:hidden focus:outline-none transition-transform duration-300">
-          <img id="menu-icon" src="images/hamburger.png" alt="Menu" class="w-6 h-6">
+          <img id="menu-icon" src="images/handburger.svg" alt="Menu" class="w-6 h-6">
         </button></a>
   
         <!-- Logo -->
-        <a href="./index.html"><img src="images/navlogo.png" alt="Logo" class="w-[121px] md:w-auto  h-6"></a>
+        <a href="./index.html"><img src="images/navlogo.svg" loading="lazy" alt="Logo" class="w-[121px] md:w-auto  h-6"></a>
       </div>
   
       <!-- Desktop Nav Links -->
@@ -39,10 +39,10 @@
       <div class="hidden lg:flex items-center gap-5">
         <div class="flex gap-2 items-center">
           <img src="images/dashboardicon.png" alt="">
-          <li class="list-none hover:text-white duration-200 cursor-pointer">Dashboard</li>
+         <a href="https://app.fundedbits.com/login"><li class="list-none hover:text-white duration-200 cursor-pointer">Dashboard</li></a> 
         </div>
   
-      <a href="#">  <button class=" px-6 py-2 rounded text-white tracking-wide backdrop-blur-sm transition-all duration-300 border border-transparent" style="
+        <a href="/index.html#challenges"> <button class=" px-6 py-2 rounded text-white tracking-wide  backdrop-blur-sm transition-all duration-300 border border-transparent" style="
           border-width: 1px;
           border-style: solid;
           border-image-source: linear-gradient(315.99deg, rgba(242, 243, 245, 0.7) 3.89%, rgba(0, 7, 18, 0.7) 94.54%);
@@ -55,15 +55,15 @@
 
  
     </div>
-   <a href="#">
+    <a href="/index.html#challenges">
   <button
-    class="mobile block lg:hidden px-3 py-2 mt-2 rounded text-white tracking-wide text-[14px] backdrop-blur-sm transition-all duration-300 border border-transparent"
+    class="mobile block lg:hidden px-3 py-2 rounded text-white tracking-wide text-[14px] backdrop-blur-sm transition-all duration-300 border border-transparent"
     style="
       border-width: 1px;
       border-style: solid;
       border-image-source: linear-gradient(315.99deg, rgba(242, 243, 245, 0.7) 3.89%, rgba(0, 7, 18, 0.7) 94.54%);
       border-image-slice: 1;
-      background-color: rgb(0, 0, 0); /* subtle black bg with transparency */
+      background-color: rgba(0, 0, 0, 0); /* subtle black bg with transparency */
     "
   >
     Get Funded
@@ -75,17 +75,17 @@
   
 
     <!-- Mobile Dropdown Menu -->
-    <div id="mobile-menu" class="fixed z-100 lg:hidden mt-[7rem] backdrop-blur-sm w-full hidden animate-fade-in-down">
-      <div class="w-full px-4 py-6 bg-[#FFFFFF0F] border border-[#7A7A7B70] rounded-[12px] flex flex-col items-center gap-4">
+    <div id="mobile-menu" class="fixed z-100 lg:hidden mt-[7rem] backdrop-blur-sm w-full  hidden animate-fade-in-down">
+      <div class="w-full px-4 py-6 bg-[#FFFFFF0F] border border-[#7A7A7B70] rounded-[12px] mr-[5rem] flex flex-col items-center gap-4">
         <ul class="flex flex-col items-center gap-4 list-none w-full">
          <a href="./affiliate.html"> <li class="cursor-pointer w-full  hover:text-white text-center">Affiliate</li></a>
          <a href="./faqs.html"> <li class="cursor-pointer w-full  hover:text-white text-center">FAQs</li></a>
          <a href="./about.html"> <li class="cursor-pointer w-full  hover:text-white text-center">About Us</li></a>
          <a href="./blog.html"> <li class="cursor-pointer w-full  hover:text-white text-center">Blog</li></a>
-          <li class="flex justify-center cursor-pointer hover:text-white duration-200 gap-2 items-center bg-[#FFFFFF0F] w-full px-4 py-2 rounded-[8px]">
+         <a href="https://app.fundedbits.com/login"><li class="flex justify-center cursor-pointer hover:text-white duration-200 gap-2 items-center bg-[#FFFFFF0F] w-[15rem] px-4 py-2 rounded-[8px]">
             <img src="images/dashboardicon.png" alt="">
             Dashboard
-          </li>
+          </li></a> 
         </ul>
       </div>
     </div>
@@ -123,7 +123,8 @@
    
 </div>
 
-   <!-- NAV END  -->
+   <!-- NAV END  -->  
+
 
     <div class="w-full p-5 lg:w-[1160px] mx-auto">
 
@@ -245,10 +246,7 @@
 </div>
 </div>
     </div>
-
-
-
-    <!--  -->
+<!--  -->
 <!--  -->
 <!-- Footer -->
 <!--  -->
@@ -256,65 +254,107 @@
 <!--  -->
 
 <footer class="px-6 sm:px-10 md:px-[108px] py-[5rem] border-t border-[#7A7A7B59]"
-style="background: radial-gradient(54.37% 124.75% at 53.04% 84.37%, rgba(76, 111, 192, 0.56) 0%, rgba(4, 34, 94, 0.56) 41.43%, rgba(0, 0, 0, 0.56) 100%);">
-
-<div class="flex flex-col lg:flex-row lg:justify-between gap-10">
-  <!-- Logo -->
-  <div class="flex-shrink-0">
-    <a href="./index.html"><img src="./images/navlogo.png" alt="Logo" class="w-[150px]"></a>
+  style="background: radial-gradient(54.37% 124.75% at 53.04% 84.37%, rgba(76, 111, 192, 0.56) 0%, rgba(4, 34, 94, 0.56) 41.43%, rgba(0, 0, 0, 0.56) 100%);">
+  
+  <div class="flex flex-col lg:flex-row lg:justify-between gap-10">
+    <!-- Logo -->
+    <div class="flex-shrink-0">
+      <a href="./index.html"><img src="./images/navlogo.svg" loading="lazy" alt="Logo" class="w-[150px]"></a>
+    </div>
+<!-- Useful Links + Legal -->
+<div class="flex flex-col sm:flex-row gap-10">
+  <!-- Useful Links -->
+  <div class="space-y-4">
+    <p class="text-[16px] font-medium text-white">Useful Links</p>
+    <ul class="list-none text-[14px] space-y-4 text-[#7A7A7B]">
+      <li><a href="./affiliate.html" class="hover:text-white duration-200 cursor-pointer">Affiliate</a></li>
+      <li><a href="./faqs.html" class="hover:text-white duration-200 cursor-pointer">FAQs</a></li>
+      <li><a href="./about.html" class="hover:text-white duration-200 cursor-pointer">About Us</a></li>
+      <li><a href="./blog.html" class="hover:text-white duration-200 cursor-pointer">Blog</a></li>
+    </ul>
   </div>
 
-  <!-- Useful Links + Legal -->
-  <div class="flex flex-col sm:flex-row gap-10">
-    <div class="space-y-4">
-      <p class="text-[16px] font-medium text-white">Useful Links</p>
-      <ul class="list-none text-[14px] space-y-4 text-[#7A7A7B]">
-        <a href="./affiliate.html"><li class="hover:text-white duration-200 cursor-pointer">Affiliate</li></a>
-        <a href="./faqs.html"><li class="hover:text-white duration-200 cursor-pointer">FAQs</li></a>
-       <a href="./about.html"> <li class="hover:text-white duration-200 cursor-pointer">About Us</li></a>
-        <a href="./blog.html"><li class="hover:text-white duration-200 cursor-pointer">Blog</li></a>
-      </ul>
-    </div>
-
-    <div class="space-y-4">
-      <p class="text-[16px] font-medium text-white">Legal</p>
-      <ul class="list-none text-[14px] space-y-4 text-[#7A7A7B]">
-        <a href="#"><li class="hover:text-white duration-200 cursor-pointer">Terms & Conditions</li></a>
-        <a href="./policy.html"><li class="hover:text-white duration-200 cursor-pointer">Privacy Policy</li></a>
-        <a href=""><li class="hover:text-white duration-200 cursor-pointer">AML Policy</li></a>
-      </ul>
-    </div>
-  </div>
-
-  <!-- Newsletter -->
-  <div class="max-w-xl">
-    <p class="text-[16px] mb-3 font-medium text-white">Subscribe to Newsletter</p>
-    <p class="text-[14px] font-medium text-[#7A7A7B] mb-4">Stay ahead in the trading world! Subscribe for exclusive updates, tips, and funding opportunities.</p>
-
-    <div class="flex flex-col sm:flex-row gap-3">
-      <input type="text" placeholder="e-mail address"
-        class="w-full sm:w-[298px] h-[45px] px-4 py-3 rounded-[8px] border border-[#7A7A7B] text-white placeholder:text-[#7A7A7B] bg-[linear-gradient(0deg,rgba(10,11,12,0.48),rgba(10,11,12,0.48)),linear-gradient(0deg,rgba(255,255,255,0.02),rgba(255,255,255,0.02))]" />
-
-     <a href="#"> <button class="px-6 py-2 rounded text-white tracking-wide backdrop-blur-sm transition-all duration-300 border border-transparent"
-        style="border-width: 1px; border-style: solid; border-image-source: linear-gradient(315.99deg, rgba(242, 243, 245, 0.7) 3.89%, rgba(0, 7, 18, 0.7) 94.54%); border-image-slice: 1;">
-        Subscribe
-      </button></a>
-    </div>
-
-    <!-- Social Icons -->
-    <div class="mt-6 w-[164px] flex justify-between">
-      <a href="#"><img src="./images/smalldiscord.png" alt=""></a>
-      <a href="#"><img src="./images/ig.png" alt=""></a>
-      <a href="#"><img src="./images/x.png" alt=""></a>
-      <a href="#"><img src="./images/youtube.png" alt=""></a>
-    </div>
+  <!-- Legal -->
+  <div class="space-y-4">
+    <p class="text-[16px] font-medium text-white">Legal</p>
+    <ul class="list-none text-[14px] space-y-4 text-[#7A7A7B]">
+      <li><a href="#" class="hover:text-white duration-200 cursor-pointer">Terms & Conditions</a></li>
+      <li><a href="./policy.html" class="hover:text-white duration-200 cursor-pointer">Privacy Policy</a></li>
+      <li><a href="#" class="hover:text-white duration-200 cursor-pointer">AML Policy</a></li>
+    </ul>
   </div>
 </div>
 
-<!-- Bottom Logo -->
-<div class="mt-[5rem]">
-  <img src="./images/FUNDEDBITS.png" class="mx-auto" alt="">
-</div>
+    <!-- Newsletter -->
+    <div class="max-w-xl">
+      <p class="text-[16px] mb-3 font-medium text-white">Subscribe to Newsletter</p>
+      <p class="text-[14px] font-medium text-[#7A7A7B] mb-4">Stay ahead in the trading world! Subscribe for exclusive updates, tips, and funding opportunities.</p>
+
+      <!-- SUBSCRIBE -->
+      <div class="flex flex-col sm:flex-row gap-3">
+        <input id="emailInput" type="text" placeholder="e-mail address"
+          class="w-full sm:w-[298px] h-[45px] px-4 py-3 rounded-[8px] border border-[#7A7A7B] text-white placeholder:text-[#7A7A7B] bg-[linear-gradient(0deg,rgba(10,11,12,0.48),rgba(10,11,12,0.48)),linear-gradient(0deg,rgba(255,255,255,0.02),rgba(255,255,255,0.02))]" />
+      
+        <button id="subscribeBtn" class="px-6 py-2 rounded text-white tracking-wide backdrop-blur-sm transition-all duration-300 border border-transparent"
+          style="border-width: 1px; border-style: solid; border-image-source: linear-gradient(315.99deg, rgba(242, 243, 245, 0.7) 3.89%, rgba(0, 7, 18, 0.7) 94.54%); border-image-slice: 1;">
+          <span id="btnText">Subscribe</span>
+          <span id="loadingSpinner" class="hidden ml-2 animate-spin border-2 border-white border-t-transparent rounded-full w-4 h-4"></span>
+        </button>
+      </div>
+      
+      <!-- Success Message Placeholder -->
+      <div id="successMsg" class="mt-3 hidden  items-center text-white text-sm gap-2">
+        <span>Success! You're now subscribed.</span>
+      </div>
+      
+
+      <script>
+        const subscribeBtn = document.getElementById("subscribeBtn");
+        const loadingSpinner = document.getElementById("loadingSpinner");
+        const btnText = document.getElementById("btnText");
+        const successMsg = document.getElementById("successMsg");
+        const emailInput = document.getElementById("emailInput");
+      
+        subscribeBtn.addEventListener("click", function () {
+          const email = emailInput.value.trim();
+      
+          if (!email || !email.includes("@")) {
+            alert("Please enter a valid email address.");
+            return;
+          }
+      
+          // Show loading
+          loadingSpinner.classList.remove("hidden");
+          btnText.textContent = "Subscribing...";
+      
+          // Simulate async request
+          setTimeout(() => {
+            loadingSpinner.classList.add("hidden");
+            btnText.textContent = "Subscribe";
+            successMsg.classList.remove("hidden");
+            emailInput.value = "";
+          }, 2000); // Simulates a 2-second network request
+        });
+      </script>
+      
+
+
+      <!-- Social Icons -->
+  <div class="mt-6 w-[164px] flex justify-between">
+        <a href=" https://discord.gg/WQKdFx6ufY"><img src="./images/smalldiscord.svg" class="transition duration-150 hover:invert hover:brightness-0" alt=""></a>
+        <a href="https://www.instagram.com/fundedbits/"><img src="./images/ig.svg" alt=""  class="transition duration-150 hover:invert hover:brightness-0"></a>
+        <a href="https://www.instagram.com/fundedbits/"><img src="./images/x.svg" alt=""  class="transition duration-150 hover:invert hover:brightness-0"></a>
+        <a href="https://www.youtube.com/@FundedBits"><img src="./images/youtube.svg" alt=""  class="transition duration-150 hover:invert hover:brightness-0"></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom Logo -->
+  <div class="mt-[5rem]">
+    <img src="./images/FUNDEDBITS.png" class="mx-auto" alt="">
+  </div>
 </footer>
+
+
 </body>
 </html>

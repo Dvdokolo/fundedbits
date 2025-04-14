@@ -273,6 +273,18 @@
   background: linear-gradient(211.68deg, #000712 -58.63%, #525C71 72.21%);
 }
 
+/* get funds btn  */
+
+.styledbutton {
+  box-shadow: inset -6px -6px 0px 0px #7A7A7B;
+  /* transition: background-color 3s ease, box-shadow 3s ease; */
+}
+
+.styledbutton:hover {
+  background-color: white;
+  box-shadow: 1px 2px 20px 1px #ffffff;
+}
+
 
 
 /* box  */

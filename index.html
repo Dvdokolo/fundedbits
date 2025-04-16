@@ -173,9 +173,18 @@ DIV FOR LIGHT
        <div class="m-[1.2rem] lg:m-[2rem]">
 
      </div>
-    <h1 class="geist font-semibold text-[36px] md:text-[60px]  leading-[100%] max-w-[754px] text-white">
-      Your Go-to Platform For Limitless Trading Growth
-    </h1>
+     <div class="relative w-fit">
+      <!-- Blurred background layer -->
+      <h1 class="absolute top-0 left-0 geist font-semibold text-[36px] md:text-[60px] leading-[100%] max-w-[754px] text-white opacity-50 blur-[4px] pointer-events-none select-none">
+        Your Go-to Platform For Limitless Trading Growth
+      </h1>
+    
+      <!-- Main visible heading -->
+      <h1 class="relative geist font-semibold text-[36px] md:text-[60px] leading-[100%] max-w-[754px] text-white">
+        Your Go-to Platform For Limitless Trading Growth
+      </h1>
+    </div>
+    
 
     <!-- Subtitle -->
     <h2 class="geist font-medium text-[16px] text-[#7A7A7B] leading-[100%] max-w-[632px]">
@@ -282,18 +291,18 @@ DIV FOR LIGHT
 
 <div class="">
   <!-- Price List -->
-   <!-- <div class="w-full max-w-[868px] flex items-center mx-auto mb-3 bg-[#040A14C7] border border-[#1C1C1D] justify-between px-4 py-4 text-sm sm:text-base text-[#7A7A7B] rounded-[9px] overflow-hidden relative">
-    <div class="absolute inset-0 rounded-[9px] border-[1.2px] border-transparent pointer-events-none" style="border-image-source: radial-gradient(51.66% 121.29% at 4.85% 0%, #CFDBF7 0%, #04225E 59.01%, rgba(0, 0, 0, 0) 100%); border-image-slice: 1;"></div>
+    <!-- <div class="w-full max-w-[868px] flex items-center mx-auto mb-3 bg-[#040A14C7] border border-[#1C1C1D] justify-between px-4 py-4 text-sm sm:text-base text-[#7A7A7B] rounded-[9px] overflow-hidden relative">
+      <div class="absolute inset-0 rounded-[9px] border-[1.2px] border-transparent pointer-events-none" style="border-image-source: radial-gradient(51.66% 121.29% at 4.85% 0%, #CFDBF7 0%, #04225E 59.01%, rgba(0, 0, 0, 0) 100%); border-image-slice: 1;"></div>
 
-    <ul id="priceList" class="flex text-[7px] md:text-[14px] flex-wrap justify-between w-full z-10 gap-x-2 gap-y-2">
-      <li class="cursor-pointer px-1 md:px-2 pb-1 transition-all duration-300">$5,000</li>
-      <li class="cursor-pointer px-1 md:px-2 pb-1 transition-all duration-300">$10,000</li>
-      <li class="cursor-pointer px-1 md:px-2 pb-1 transition-all duration-300">$25,000</li>
-      <li class="cursor-pointer px-1 md:px-2 pb-1 transition-all duration-300">$50,000</li>
-      <li class="cursor-pointer px-1 md:px-2 pb-1 transition-all duration-300">$100,000</li>
-      <li class="cursor-pointer px-1 md:px-2 pb-1 transition-all duration-300">$200,000🔥</li>
-    </ul>
-  </div>  -->
+      <ul id="priceList" class="flex text-[7px] md:text-[14px] flex-wrap justify-between w-full z-10 gap-x-2 gap-y-2">
+        <li class="cursor-pointer px-1 md:px-2 pb-1 transition-all duration-300">$5,000</li>
+        <li class="cursor-pointer px-1 md:px-2 pb-1 transition-all duration-300">$10,000</li>
+        <li class="cursor-pointer px-1 md:px-2 pb-1 transition-all duration-300">$25,000</li>
+        <li class="cursor-pointer px-1 md:px-2 pb-1 transition-all duration-300">$50,000</li>
+        <li class="cursor-pointer px-1 md:px-2 pb-1 transition-all duration-300">$100,000</li>
+        <li class="cursor-pointer px-1 md:px-2 pb-1 transition-all duration-300">$200,000🔥</li>
+      </ul>
+    </div>  -->
 
   <div class="fancy-container w-full  max-w-[868px] mx-auto mb-3 text-sm sm:text-base text-[#7A7A7B]  rounded-[9px] overflow-hidden relative">
     <!-- Rotating border effect -->
@@ -334,8 +343,8 @@ DIV FOR LIGHT
     </div>
 
     <!-- Table -->
-    <div class="overflow-x-auto min-w-[600px] flex-1">
-      <table class="w-full rounded-[16px] h-[500px] border border-[#1C1C1D] bg-[#040A14C7] backdrop-blur-[16.2px] text-sm">
+    <div class="overflow-x-auto rounded-[16px] border border-[#1C1C1D]  min-w-[600px] flex-1">
+      <table class="w-full rounded-[16px] h-[500px] bg-[#040A14C7] backdrop-blur-[16.2px] text-sm">
         <thead>
           <tr>
             <th class="text-white text-center font-bold py-4 px-2 bg-[#FFFFFF05] border-b border-[#1C1C1D]">
@@ -400,7 +409,7 @@ DIV FOR LIGHT
   <div class="lg:justify-center lg:items-center lg:flex ">
    <a href="#"> <button id="getFundedBtn"
     class="styledbutton h-[51px] w-full md:w-[224px] bg-[#E6E6E6] text-black font-mono px-6 py-[14px] rounded-[4px]  border-[#00000050] border-[1.5px] shadow-[4px_4px_0px_#00000080] transition-all duration-300 hover:bg-white hover:shadow-[0_0_15px_white]"
-    style=""
+   
   >
   Get Funded - 
   </button></a>
@@ -556,7 +565,7 @@ DIV FOR LIGHT
 <!--  -->
 <!--  -->
 
-<img src="./images/maketrading easy.png" class="mx-auto lg:hidden" alt="">
+<img src="./images/maketrading easy.png" class="mx-auto lg:hidden animate-pulse" alt="">
 
 <!--  -->
 <!--  -->
@@ -564,7 +573,7 @@ DIV FOR LIGHT
 <div class="hidden lg:block">
   <div class="lg:w-[1100px]  mx-auto flex items-center mt-[3rem] justify-evenly gap-10 p-5">
     <!-- Left Box -->
-    <div class="relative flex items-center justify-center w-[400px] h-[270px] rounded-[16px]"
+    <div class="relative flex items-center justify-center w-[400px] h-[270px] rounded-[16px] animate-pulse"
          style="background: radial-gradient(79.11% 79.11% at 100% 12.66%, #4C6FC0 0%, #04225E 59.01%, #000712 100%); backdrop-filter: blur(24.8px);">
       
       <!-- Enlarged & repositioned background image -->
@@ -585,7 +594,7 @@ DIV FOR LIGHT
     </div>
   
     <!-- Right Box -->
-    <div class="relative flex items-center justify-center w-[400px] h-[270px] rounded-[16px]"
+    <div class="relative flex items-center justify-center w-[400px] h-[270px] rounded-[16px] animate-pulse"
          style="background: radial-gradient(79.11% 79.11% at 0% 12.66%, #4C6FC0 0%, #04225E 59.01%, #000712 100%); backdrop-filter: blur(24.8px);">
       
       <!-- Enlarged & repositioned background image -->
@@ -726,13 +735,16 @@ DIV FOR LIGHT
     <img src="./images/unlock capital.png" class="w-[332px] h-[195px]" alt="">
     <img src="./images/digitalcurrency.png" class="w-[332px] h-[195px]" alt="">
     <img src="./images/Frame 1410103994.png" class="w-[332px] h-[195px]" alt="">
-    <img src="./images/unlock capital.png" class="w-[332px] h-[195px]" alt="">
+    <img src="./images/instantpayoutdiv.png" class="w-[332px] h-[195px]" alt="">
+    <img src="./images/zeroswapfee.png" class="w-[332px] h-[195px]" alt="">
+    <img src="./images/trade anytime anywhere.png" class="w-[332px] h-[195px]" alt="">
     <!-- Duplicate images for seamless loop -->
-    
+    <img src="./images/unlock capital.png" class="w-[332px] h-[195px]" alt="">
     <img src="./images/digitalcurrency.png" class="w-[332px] h-[195px]" alt="">
     <img src="./images/Frame 1410103994.png" class="w-[332px] h-[195px]" alt="">
-    <img src="./images/unlock capital.png" class="w-[332px] h-[195px]" alt="">
-    <img src="./images/digitalcurrency.png" class="w-[332px] h-[195px]" alt="">
+    <img src="./images/instantpayoutdiv.png" class="w-[332px] h-[195px]" alt="">
+    <img src="./images/zeroswapfee.png" class="w-[332px] h-[195px]" alt="">
+    <img src="./images/trade anytime anywhere.png" class="w-[332px] h-[195px]" alt="">
   </div>
 </div>
 
@@ -753,7 +765,7 @@ DIV FOR LIGHT
   }
 
   .overflow-hidden:hover .marquee {
-    animation: scrollMarquee 20s linear infinite; /* slow down on hover */
+    animation: scrollMarquee 13.5s linear infinite; /* slow down on hover */
     will-change: transform;
   }
 </style>
@@ -844,16 +856,18 @@ DIV FOR LIGHT
 <div class="overflow-hidden relative">
   <div class="marquee flex items-center gap-10 w-max">
     <img src="./images/certificate-of-challange-complition.png" class="" alt="">
-    <img src="./images/certificate-of-challange-complition.png" class="" alt="">
-    <img src="./images/certificate-of-challange-complition.png" class="" alt="">
-    <img src="./images/certificate-of-challange-complition.png" class="" alt="">
-    <img src="./images/certificate-of-challange-complition.png" class="" alt="">
+    <img src="./images/certificate-of-challange-complition2.png" class="" alt="">
+    <img src="./images/certificate-of-challange-complition3.png" class="" alt="">
+    <img src="./images/certificate-of-challange-complition4.png" class="" alt="">
+    <img src="./images/certificate-of-challange-complition5.png" class="" alt="">
+    <img src="./images/certificate-of-challange-complition6.png" class="" alt="">
     <!-- Duplicate images for seamless loop -->
     <img src="./images/certificate-of-challange-complition.png" class="" alt="">
-    <img src="./images/certificate-of-challange-complition.png" class="" alt="">
-    <img src="./images/certificate-of-challange-complition.png" class="" alt="">
-    <img src="./images/certificate-of-challange-complition.png" class="" alt="">
-    <img src="./images/certificate-of-challange-complition.png" class="" alt="">
+    <img src="./images/certificate-of-challange-complition2.png" class="" alt="">
+    <img src="./images/certificate-of-challange-complition3.png" class="" alt="">
+    <img src="./images/certificate-of-challange-complition4.png" class="" alt="">
+    <img src="./images/certificate-of-challange-complition5.png" class="" alt="">
+    <img src="./images/certificate-of-challange-complition6.png" class="" alt="">
   </div>
 </div>
 
@@ -883,7 +897,7 @@ DIV FOR LIGHT
 
 <!-- HEAR FROM OUR TRADERS -->
 
-<div class="overflow-hidden relative mt-[11.255rem]">
+<div class="overflow-hidden relative my-[11.255rem]">
   <div class="marquee flex items-center gap-10 w-max">
 
     <!-- 1  -->
@@ -1051,8 +1065,10 @@ DIV FOR LIGHT
 
 
 
-<div class="mx-auto my-[5rem] md:w-[604px] md:h-[178px] p-3 rounded-[20px] border border-[#1C1C1D]"
-     style="background: radial-gradient(95.74% 113.76% at 104.39% -13.76%, rgba(76, 111, 192, 0.56) 0%, rgba(4, 34, 94, 0.56) 41.43%, rgba(0, 0, 0, 0.56) 100%);">
+<div class="mx-auto my-[5rem] md:w-[604px] md:h-[178px] p-3 cursor-pointer rounded-[20px] border border-[#1C1C1D]"
+style="animation: ease-in-out; background:radial-gradient(95.74% 113.76% at 104.39% -13.76%, rgba(76, 111, 192, 0.56) 0%, rgba(4, 34, 94, 0.56) 41.43%, rgba(0, 0, 0, 0.56) 100%);"
+onmouseover="this.style.background='radial-gradient(95.74% 113.76% at 104.39% -13.76%, rgba(126, 166, 255, 0.56) 0%, rgba(44, 85, 161, 0.56) 41.43%, rgba(0, 0, 0, 0.56) 100%)'"
+onmouseout="this.style.background='radial-gradient(95.74% 113.76% at 104.39% -13.76%, rgba(76, 111, 192, 0.56) 0%, rgba(4, 34, 94, 0.56) 41.43%, rgba(0, 0, 0, 0.56) 100%)'">
      <div class="md:flex justify-evenly md:w-[580px] md:h-[154px] p-5 gap-[44px] rounded-[16px] border border-[#1C1C1D] bg-[#0A0B0C7A]"
      style="background: linear-gradient(0deg, rgba(10, 11, 12, 0.48), rgba(10, 11, 12, 0.48)), linear-gradient(0deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.08));">
      <img src="./images/discord.png" class="mb-5" alt="">
@@ -1187,8 +1203,16 @@ DIV FOR LIGHT
   <div class="mt-[5rem]">
     <img src="./images/FUNDEDBITS.png" class="mx-auto" alt="">
   </div>
+
+
+
+  <div class="mt-10 lg:flex justify-between">
+<h1 class="text-[#7A7A7B] text-[12px] text-center">Contact: <span class="underline">support@fundedbits.com</span></h1>
+<br>
+<h1 class="text-[#7A7A7B] text-[12px] text-center">©2025 fundedbits. All rights reserved</h1>
+  </div>
 </footer>
 
 
 </body>
-</html>
+</html> 

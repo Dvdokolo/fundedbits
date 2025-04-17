@@ -232,50 +232,113 @@ DIV FOR LIGHT
 
 </div>
 
+<!-- MP4 with fallback image -->
+<div class="relative w-full lg:w-[862px] lg:h-[332px] mx-auto">
+  <!-- Fallback image -->
+  <img
+    src="./images/homepgeimg.png"
+    alt="Fallback image"
+    id="videoFallback"
+    class="w-full h-full object-cover absolute top-0 left-0 z-0"
+  />
 
-<!-- MP4 -->
- 
-<video
-  id="lazyVideo"
-  class="w-full lg:w-[862px] lg:h-[332px] mx-auto hidden pointer-events-none"
-  autoplay
-  loop
-  muted
-  playsinline
-  preload="none"
->
-  <source src="./mp4/Hero Section_v3.mp4" type="video/mp4" />
-  Your browser does not support the video tag.
-</video>
+  <!-- Video -->
+  <video
+    id="lazyVideo"
+    class="w-full h-full hidden pointer-events-none relative z-10"
+    autoplay
+    loop
+    muted
+    playsinline
+    preload="none"
+  >
+    <source src="./mp4/Hero Section_v3.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+</div>
 
 <script>
   window.onload = function () {
     const video = document.getElementById('lazyVideo');
+    const fallback = document.getElementById('videoFallback');
+
     video.classList.remove('hidden');
     video.load();
 
-    // Try to play programmatically after load
-    video.play().catch((error) => {
-      console.warn('Autoplay blocked:', error);
-      // fallback if needed (optional)
-    });
+    video
+      .play()
+      .then(() => {
+        // Hide fallback once video plays successfully
+        fallback.style.display = 'none';
+      })
+      .catch((error) => {
+        console.warn('Autoplay blocked or failed:', error);
+        // Keep fallback visible
+      });
 
-    // Force video to resume if paused (watchdog)
+    // Watchdog: try replaying and hiding fallback
     setInterval(() => {
       if (video.paused) {
-        video.play().catch(() => {});
+        video.play().then(() => {
+          fallback.style.display = 'none';
+        }).catch(() => {});
       }
     }, 2000);
   };
 </script>
 
 
-
-
 <br>
 <br>
 
-<img src="./images/tradingline.png" class="w-full bg-cover" alt="">
+<!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+  <div class="tradingview-widget-container__widget"></div>
+  <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank"><span class="blue-text">Track all markets on TradingView</span></a></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-tickers.js" async>
+  {
+  "symbols": [
+    {
+      "proName": "BITSTAMP:BTCUSD",
+      "title": "Bitcoin"
+    },
+    {
+      "proName": "BITSTAMP:ETHUSD",
+      "title": "Ethereum"
+    },
+    {
+      "description": "XRP",
+      "proName": "BITSTAMP:XRPUSD"
+    },
+    {
+      "description": "Doge",
+      "proName": "COINBASE:DOGEUSD"
+    },
+    {
+      "description": "XAU",
+      "proName": "FOREXCOM:XAUUSD"
+    },
+    {
+      "description": "Eur",
+      "proName": "OANDA:EURUSD"
+    },
+    {
+      "description": "SPX",
+      "proName": "SP:SPX"
+    },
+    {
+      "description": "DXY",
+      "proName": "TVC:DXY"
+    }
+  ],
+  "isTransparent": false,
+  "showSymbolLogo": true,
+  "colorTheme": "dark",
+  "locale": "en"
+}
+  </script>
+</div>
+<!-- TradingView Widget END -->
 
 
 <!-- CHALLANGES -->
@@ -319,6 +382,7 @@ DIV FOR LIGHT
         <li class="cursor-pointer px-1 md:px-2 pb-1 transition-all duration-300">$200,000🔥</li>
       </ul>
     </div>
+    
   </div>
   
   
@@ -565,7 +629,7 @@ DIV FOR LIGHT
 <!--  -->
 <!--  -->
 
-<img src="./images/maketrading easy.png" class="mx-auto lg:hidden animate-pulse" alt="">
+<img src="./images/maketrading easy.png" class="mx-auto lg:hidden animate-pulse mb-[5.5rem]" alt="">
 
 <!--  -->
 <!--  -->
@@ -619,8 +683,8 @@ DIV FOR LIGHT
 <div class="">
  
 
-  <h1 class="geist font-semibold text-[40px] leading-[100%] mb-5 text-center mx-auto text-white">
-    Evaluation Process
+  <h1 class="geist font-semibold text-[32px] lg:text-[40px] leading-[100%] mb-5 text-center mx-auto text-white">
+    Evaluation Process 
   </h1>
 
   <h1 class="geist font-medium text-[14px] leading-[100%] max-w-[520px] text-center mb-3 mx-auto text-[#7A7A7B]">
@@ -629,7 +693,7 @@ DIV FOR LIGHT
 </div>
 
 
-<div class="flex flex-wrap mt-[5rem] justify-evenly ">
+<div class="flex flex-wrap mt-[5rem] lg:mx-[3rem] justify-evenly ">
 
 <div class="w-[418px]  lg:border-r border-[#525C71] p-5 ">
 
@@ -730,15 +794,28 @@ DIV FOR LIGHT
   </h1>
 </div>
 
-<div class="overflow-hidden relative">
-  <div class="marquee flex items-center   gap-10 w-max">
+
+
+
+<!--  -->
+<!--  -->
+<div class="overflow-hidden relative w-full">
+  <!-- Left Blur Overlay -->
+  <div class="absolute top-0 left-0 h-full w-20 z-10 pointer-events-none bg-gradient-to-r from-black to-transparent"></div>
+  
+  <!-- Right Blur Overlay -->
+  <div class="absolute top-0 right-0 h-full w-20 z-10 pointer-events-none bg-gradient-to-l from-black to-transparent"></div>
+
+  <!-- Scrolling Images Marquee -->
+  <div class="marquee flex items-center gap-10 w-max">
     <img src="./images/unlock capital.png" class="w-[332px] h-[195px]" alt="">
     <img src="./images/digitalcurrency.png" class="w-[332px] h-[195px]" alt="">
     <img src="./images/Frame 1410103994.png" class="w-[332px] h-[195px]" alt="">
     <img src="./images/instantpayoutdiv.png" class="w-[332px] h-[195px]" alt="">
     <img src="./images/zeroswapfee.png" class="w-[332px] h-[195px]" alt="">
     <img src="./images/trade anytime anywhere.png" class="w-[332px] h-[195px]" alt="">
-    <!-- Duplicate images for seamless loop -->
+
+    <!-- Duplicates for seamless loop -->
     <img src="./images/unlock capital.png" class="w-[332px] h-[195px]" alt="">
     <img src="./images/digitalcurrency.png" class="w-[332px] h-[195px]" alt="">
     <img src="./images/Frame 1410103994.png" class="w-[332px] h-[195px]" alt="">
@@ -747,7 +824,6 @@ DIV FOR LIGHT
     <img src="./images/trade anytime anywhere.png" class="w-[332px] h-[195px]" alt="">
   </div>
 </div>
-
 
 <style>
   @keyframes scrollMarquee {
@@ -760,15 +836,18 @@ DIV FOR LIGHT
   }
 
   .marquee {
-    animation: scrollMarquee 13.5s linear infinite;
+    animation: scrollMarquee 30s linear infinite;
     will-change: transform;
   }
 
   .overflow-hidden:hover .marquee {
-    animation: scrollMarquee 13.5s linear infinite; /* slow down on hover */
-    will-change: transform;
+    animation: scrollMarquee 30s linear infinite; /* slower on hover */
   }
 </style>
+
+
+
+
 
   
 
@@ -836,7 +915,7 @@ DIV FOR LIGHT
 
 
 
-<div class="">
+<div class="mt-[5.5rem] lg:mt-[11.26rem]">
   
   <h1 class="geist font-semibold text-[30px] lg:text-[40px] leading-[100%] px-2 mb-5 text-center mx-auto text-white">
     Celebrate Every Win
@@ -879,7 +958,7 @@ DIV FOR LIGHT
 
 
 
-<div class="mt-[5.5rem] lg:mt-[11.26rem]">
+<div class="mt-[5.5rem] mb-10 lg:mt-[11.26rem]">
   <h1 class="geist font-medium text-[14px] leading-[100%] max-w-[754px] text-center mb-3 mx-auto text-[#7A7A7B]">
     Dashboard
   </h1>
@@ -890,14 +969,20 @@ DIV FOR LIGHT
 </div>
 
 <div class="flex justify-center">
-<img src="./images/dashboard.svg" alt="" loading="lazy">
+<img src="./images/dashboard.svg" alt="" loading="lazy" class="hidden md:block">
+<img src="./images/dashboardmobile.png" alt="" loading="lazy" class="block md:hidden bg-cover w-full">
 </div>
 
 
 
 <!-- HEAR FROM OUR TRADERS -->
 
+
+
 <div class="overflow-hidden relative my-[11.255rem]">
+  <h1 class="geist font-semibold text-[30px] lg:text-[40px] leading-[100%] px-2 mb-10 text-center mx-auto text-white">
+    Hear from our Traders
+  </h1>
   <div class="marquee flex items-center gap-10 w-max">
 
     <!-- 1  -->
@@ -1065,7 +1150,7 @@ DIV FOR LIGHT
 
 
 
-<div class="mx-auto my-[5rem] md:w-[604px] md:h-[178px] p-3 cursor-pointer rounded-[20px] border border-[#1C1C1D]"
+<div class="mx-auto mt-[11.25rem] mb-[5rem] md:w-[604px] md:h-[178px] p-3 cursor-pointer rounded-[20px] border border-[#1C1C1D]"
 style="animation: ease-in-out; background:radial-gradient(95.74% 113.76% at 104.39% -13.76%, rgba(76, 111, 192, 0.56) 0%, rgba(4, 34, 94, 0.56) 41.43%, rgba(0, 0, 0, 0.56) 100%);"
 onmouseover="this.style.background='radial-gradient(95.74% 113.76% at 104.39% -13.76%, rgba(126, 166, 255, 0.56) 0%, rgba(44, 85, 161, 0.56) 41.43%, rgba(0, 0, 0, 0.56) 100%)'"
 onmouseout="this.style.background='radial-gradient(95.74% 113.76% at 104.39% -13.76%, rgba(76, 111, 192, 0.56) 0%, rgba(4, 34, 94, 0.56) 41.43%, rgba(0, 0, 0, 0.56) 100%)'">
@@ -1128,9 +1213,9 @@ onmouseout="this.style.background='radial-gradient(95.74% 113.76% at 104.39% -13
   <div class="space-y-4">
     <p class="text-[16px] font-medium text-white">Legal</p>
     <ul class="list-none text-[14px] space-y-4 text-[#7A7A7B]">
-      <li><a href="#" class="hover:text-white duration-200 cursor-pointer">Terms & Conditions</a></li>
+      <li><a href="https://fundedbits.com/fundedbits-terms-conditions/" class="hover:text-white duration-200 cursor-pointer">Terms & Conditions</a></li>
       <li><a href="./policy.html" class="hover:text-white duration-200 cursor-pointer">Privacy Policy</a></li>
-      <li><a href="#" class="hover:text-white duration-200 cursor-pointer">AML Policy</a></li>
+      <li><a href="https://fundedbits.com/aml-policy/" class="hover:text-white duration-200 cursor-pointer">AML Policy</a></li>
     </ul>
   </div>
 </div>

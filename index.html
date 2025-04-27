@@ -250,10 +250,10 @@ DIV FOR LIGHT
     loop
     muted
     playsinline
+    loading="lazy"
     preload="none"
   >
     <source src="./mp4/Hero Section_v3.mp4" type="video/mp4" />
-    Your browser does not support the video tag.
   </video>
 </div>
 
@@ -977,9 +977,29 @@ DIV FOR LIGHT
 </div>
 
 <div class="flex justify-center">
-<img src="./images/dashboard.svg" alt="" loading="lazy" class="hidden md:block">
-<img src="./images/dashboardmobile.png" alt="" loading="lazy" class="block md:hidden bg-cover w-full">
+  <!-- Desktop Video -->
+  <video 
+    src="./mp4/Dashboard_desktop.mp4" 
+    autoplay 
+    muted 
+    loop 
+    playsinline 
+    loading="lazy"
+    class="hidden md:block  object-cover">
+  </video>
+
+  <!-- Mobile Video -->
+  <video 
+    src="./mp4/Dashboard_mobile.mp4" 
+    autoplay 
+    muted 
+    loop 
+    playsinline 
+    loading="lazy"
+    class="block md:hidden w-full h-auto object-cover">
+  </video>
 </div>
+
 
 
 
@@ -1292,6 +1312,35 @@ onmouseout="this.style.background='radial-gradient(95.74% 113.76% at 104.39% -13
     </div>
   </div>
 
+<div class="my-[60px] text-[#7A7A7B]  mx-auto ">
+  <hr>
+<div class="pt-[20px] text-[12px] leading-[18px] font-normal ">
+  <h1>Disclaimer: All information provided on this site is
+    intended solely for educational purposes relating to
+     trading and financial markets, it is in no way a
+      specific investment recommendation, trading or
+       investment opportunity or similar general 
+       recommendations regarding trading of investment
+        instruments. Fundedbits Limited only provides 
+        simulated trading services and educational tools 
+        for traders. The information contained in this
+         site is not directed at residents of countries 
+         or jurisdictions where its distribution or use
+          would be contrary to local law or regulation.
+           Fundedbits Limited does not act as a broker
+            and does not accept any deposits.
+ 
+ </h1>
+</div>
+</div>
+
+
+<div class="mt-10 lg:flex justify-between">
+  <h1 class="text-[#7A7A7B] text-[12px] text-center">Contact: <span class="underline">support@fundedbits.com</span></h1>
+  <br>
+  <h1 class="text-[#7A7A7B] text-[12px] text-center">©2025 fundedbits. All rights reserved</h1>
+    </div>
+
   <!-- Bottom Logo -->
   <div class="mt-[5rem]">
     <img src="./images/FUNDEDBITS.png" class="mx-auto" alt="">
@@ -1299,11 +1348,6 @@ onmouseout="this.style.background='radial-gradient(95.74% 113.76% at 104.39% -13
 
 
 
-  <div class="mt-10 lg:flex justify-between">
-<h1 class="text-[#7A7A7B] text-[12px] text-center">Contact: <span class="underline">support@fundedbits.com</span></h1>
-<br>
-<h1 class="text-[#7A7A7B] text-[12px] text-center">©2025 fundedbits. All rights reserved</h1>
-  </div>
 </footer>
 
 

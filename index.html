@@ -596,6 +596,7 @@ priceList.forEach(item => {
     fundedBtn.innerHTML = `Get Funded - ${details.fee}`;
     // Update link href
     fundedLink.setAttribute("href", details.link);
+    fundedLink.setAttribute("target", "_blank"); // <-- Open in new tab
 
     // Update table
     const rows = tbody.querySelectorAll("tr");

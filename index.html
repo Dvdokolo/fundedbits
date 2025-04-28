@@ -470,12 +470,12 @@ DIV FOR LIGHT
 <br>
   </div>
   <div class="lg:justify-center lg:items-center lg:flex ">
-   <a href="#"> <button id="getFundedBtn"
-    class="styledbutton h-[51px] w-full md:w-[224px] bg-[#E6E6E6] text-black font-mono px-6 py-[14px] rounded-[4px]  border-[#00000050] border-[1.5px] shadow-[4px_4px_0px_#00000080] transition-all duration-300 hover:bg-white hover:shadow-[0_0_15px_white]"
-   
-  >
-  Get Funded - 
-  </button></a>
+    <a id="getFundedLink" href="">
+      <button id="getFundedBtn"
+        class="styledbutton h-[51px] w-full md:w-[224px] bg-[#E6E6E6] text-black font-mono px-6 py-[14px] rounded-[4px] border-[#00000050] border-[1.5px] shadow-[4px_4px_0px_#00000080] transition-all duration-300 hover:bg-white hover:shadow-[0_0_15px_white]">
+        Get Funded -
+      </button>
+    </a>
   </div>
 </div>
 
@@ -483,6 +483,7 @@ DIV FOR LIGHT
   const data = {
     "$5,000": {
       fee: "$59",
+      link: "https://fundedbits.com/checkout/",
       table: [
         ["$400 (8%)", "$250 (5%)", "Funded"],
         ["$250", "$250", "$250"],
@@ -497,6 +498,7 @@ DIV FOR LIGHT
     },
     "$10,000": {
       fee: "$109",
+      link: "https://fundedbits.com/checkout/",
       table: [
         ["$800 (8%)", "$500 (5%)", "Funded"],
         ["$500", "$500", "$500"],
@@ -511,6 +513,7 @@ DIV FOR LIGHT
     },
     "$25,000": {
       fee: "$229",
+      link: "https://fundedbits.com/checkout/",
       table: [
         ["$2000 (8%)", "$1250 (5%)", "Funded"],
         ["$1250", "$1250", "$1250"],
@@ -525,6 +528,7 @@ DIV FOR LIGHT
     },
     "$50,000": {
       fee: "$349",
+      link: "https://fundedbits.com/checkout/",
       table: [
         ["$4000 (8%)", "$2500 (5%)", "Funded"],
         ["$2500", "$2500", "$2500"],
@@ -539,6 +543,7 @@ DIV FOR LIGHT
     },
     "$100,000": {
       fee: "$599",
+      link: "https://fundedbits.com/checkout/",
       table: [
         ["$8000 (8%)", "$5000 (5%)", "Funded"],
         ["$5000", "$5000", "$5000"],
@@ -553,6 +558,7 @@ DIV FOR LIGHT
     },
     "$200,000🔥": {
       fee: "$1099",
+      link: "https://fundedbits.com/checkout/",
       table: [
         ["$16000 (8%)", "$10000 (5%)", "Funded"],
         ["$10000", "$10000", "$10000"],
@@ -567,49 +573,56 @@ DIV FOR LIGHT
     }
   };
   const priceList = document.querySelectorAll("#priceList li");
-  const fundedBtn = document.getElementById("getFundedBtn");
-  const tbody = document.querySelector("table tbody");
+const fundedBtn = document.getElementById("getFundedBtn");
+const fundedLink = document.getElementById("getFundedLink");
+const tbody = document.querySelector("table tbody");
 
-  priceList.forEach(item => {
-    item.addEventListener("click", () => {
-      // Style update
-      priceList.forEach(li => {
-        li.style.borderBottom = "none";
-        li.style.borderImage = "none";
-      });
-      item.style.borderBottom = "3px solid";
-      item.style.borderImage = "radial-gradient(135.64% 227.94% at -18.83% 100%, #FFFFFF 0%, #000712 53.4%, #FFFFFF 100%) 1";
+priceList.forEach(item => {
+  item.addEventListener("click", () => {
+    // Style update
+    priceList.forEach(li => {
+      li.style.borderBottom = "none";
+      li.style.borderImage = "none";
+    });
+    item.style.borderBottom = "3px solid";
+    item.style.borderImage = "radial-gradient(135.64% 227.94% at -18.83% 100%, #FFFFFF 0%, #000712 53.4%, #FFFFFF 100%) 1";
 
-      const selected = item.textContent.trim();
-      const details = data[selected];
+    const selected = item.textContent.trim();
+    const details = data[selected];
 
-      if (!details) return;
+    if (!details) return;
 
-      // Update button
-      fundedBtn.innerHTML = `Get Funded - ${details.fee}`;
+    // Update button text
+    fundedBtn.innerHTML = `Get Funded - ${details.fee}`;
+    // Update link href
+    fundedLink.setAttribute("href", details.link);
 
-      // Update table
-      const rows = tbody.querySelectorAll("tr");
-      details.table.forEach((row, i) => {
-        const cells = rows[i].querySelectorAll("td");
-        row.forEach((val, j) => {
-          cells[j].innerHTML = val;
-        });
+    // Update table
+    const rows = tbody.querySelectorAll("tr");
+    details.table.forEach((row, i) => {
+      const cells = rows[i].querySelectorAll("td");
+      row.forEach((val, j) => {
+        cells[j].innerHTML = val;
       });
     });
   });
+});
 
-  // Trigger default: $50,000
-  document.querySelectorAll("#priceList li").forEach(item => {
-    if (item.textContent.trim() === "$50,000") {
-      item.click();
-    }
-  });
+// Trigger default: $50,000
+document.querySelectorAll("#priceList li").forEach(item => {
+  if (item.textContent.trim() === "$50,000") {
+    item.click();
+  }
+});
 
 </script>
 
 
+
 </div>
+
+
+
 </div>
 
 <!-- CHALLANGES TABLE END  -->
